@@ -9,7 +9,7 @@ import Slider from './Slider'
 import Service from './Service'
 
 const redial = {
-  fetch: ({ dispatch }) => dispatch(loadData())
+  // fetch: ({ dispatch }) => dispatch(loadData())
 }
 
 const mapStateToProps = state => ({

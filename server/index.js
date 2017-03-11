@@ -39,6 +39,7 @@ export const createServer = (config) => {
 
   const app = express()
   let assets = null
+  app.use('/assets', express.static('public'))
   app.use('/assets', express.static('public/assets'))
   app.use('/image/get', express.static('_image'))
   app.use('/api', require('./routes/api'))

@@ -1,3 +1,4 @@
+/* global $ */
 import 'babel-polyfill'
 import { trigger } from 'redial'
 
@@ -38,6 +39,7 @@ const render = () => {
           window.bootsnav()
           window.progressbar()
           window.copious()
+          $('.fa-times').trigger('click')
           window.scrollTo(0, 0)
         }
         }routes={routes} history={browserHistory} key={Math.random()} />

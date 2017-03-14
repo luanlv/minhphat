@@ -56,8 +56,8 @@ class Slider extends React.Component {
                 data-mask_in='x:0px;y:0px;s:inherit;e:inherit;'
                 data-mask_out='x:0;y:0;s:inherit;e:inherit;'
                 data-start='1500'>
-                <a href='about_us.html' className='btn-light'>Dịch vụ</a>
-                <a href='#.' className='btn-dark button-black'>Liên hệ</a>
+                <Link to='/services' className='btn-light'>Dịch vụ</Link>
+                <Link to='/contact' className='btn-dark button-black'>Liên hệ</Link>
               </div>
             </li>
             <li data-transition='fade'> <img src='/assets/images/finance/bannar_3.jpg' alt='' data-bgposition='center center' data-bgfit='cover' />

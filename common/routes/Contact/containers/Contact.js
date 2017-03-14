@@ -35,8 +35,7 @@ class HomePage extends React.Component {
               <div className='col-md-8 p-b-10'>
                 <div className='heading'>
                   <div className='heading_border bg_red' />
-                  <p>Contact Us</p>
-                  <h2>WE WANT TO <span className='color_red'>HEAR FROM YOU</span></h2>
+                  <h2>ĐỂ LẠI TIN NHẮN CHO CHÚNG TÔI</h2>
                 </div>
                 <div className='row p-t-40'>
                   <form id='contact-form' >
@@ -74,39 +73,18 @@ class HomePage extends React.Component {
               </div>
 
               <div className='col-md-4 col-sm-8 colxs-12'>
-
-                <div className='form_left p-b-80'>
-                  <h3 className='text-uppercase'><span>2</span>Contact Information</h3>
-                  <p>Benenatis mauris Vestibulum ante ipsum primis in industry, logistics, finance, business orci ultrices venenatis mauris. It is a long established fact that a reader will be distracted. </p>
-                </div>
-
-                <div className='form_left p-b-80'>
-                  <h3 className='text-uppercase'><span>1</span>Get in Touch</h3>
-                  <div className='footer_1_contact'>
-                    <p><i className='icon-telephone114' />+1(123) 456 7890 - 1</p>
-                    <br />
-                    <p><i className=' icon-icons142' />hello@copious.com</p>
-                    <br />
-                    <p><i className='icon-icons20' />Mon to Fri - 08:00 to 16:30</p>
-                    <br />
-                    <i className='icon-icons74' />
-                    <p>Manhattan Hall, Lacasa Ave Melbourne,
-                    <br />124BP Australia</p>
-                  </div>
-                </div>
-
                 <div className='form_left'>
-                  <h3 className='text-uppercase'><span>3</span>Social Media</h3>
-                  <p>Benenatis mauris Vestibulum ante ipsum primis in industry, logistics, finance, business.</p>
-                  <div className='social-icons_1 p-t-30'>
-                    <ul>
-                      <li><a href='#'><i className='fa fa-facebook' aria-hidden='true' /></a></li>
-                      <li><a href='#'><i className='fa fa-twitter' aria-hidden='true' /></a></li>
-                      <li><a href='#'><i aria-hidden='true' className='fa fa-dribbble' /></a></li>
-                      <li><a href='#'><i className='fa fa-linkedin' aria-hidden='true' /></a></li>
-                      <li><a href='#'><i className='fa fa-vimeo' aria-hidden='true' /></a></li>
-                    </ul>
-
+                  <h3>LIÊN HỆ</h3>
+                  <div className='textwidget'>
+                    <p>
+                      <strong>MINH PHAT LOGISTICS LOGISTICS AND PACKING</strong>
+                      <br />
+                      <strong>Địa chỉ:&nbsp;</strong>
+                         Tầng 7 Tòa nhà Sông Đà 9, Đường Phạm Hùng, Phường Mỹ Đình 2 , Quận Nam Từ Liêm, Hà Nội, Việt Nam
+                      <strong>SDT:</strong> 0432019595<br />
+                      <strong>Fax:</strong> 0432019595<br />
+                      <strong>Email:</strong> hiendv@minhphatlogistics.com.vn
+                    </p>
                   </div>
                 </div>
 

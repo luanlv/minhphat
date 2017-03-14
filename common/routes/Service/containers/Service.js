@@ -37,13 +37,13 @@ class HomePage extends React.Component {
                 <div className='solution_tabs'>
                   <h3>Các dịch vụ của Minh Phát</h3>
                   <ul>
-                    <li className='active'><a href='#'>Tất cả các dịch vụ</a></li>
-                    <li><a href='#'>Thủ tục hải quan</a></li>
-                    <li><a href='#'>Vận chuyển hàng không</a></li>
-                    <li><a href='#'>Vận chuyển đường biển</a></li>
-                    <li><a href='#'>Vận chuyển Bắc Nam</a></li>
-                    <li><a href='#'>Nâng hạ máy móc và hàng dự án</a></li>
-                    <li><a href='#'>Đóng kiện gỗ</a></li>
+                    <li className='active'><a href='services.html'>Tất cả các dịch vụ</a></li>
+                    <li><a href='services.html'>Thủ tục hải quan</a></li>
+                    <li><a href='services.html'>Vận chuyển hàng không</a></li>
+                    <li><a href='services.html'>Vận chuyển đường biển</a></li>
+                    <li><a href='services.html'>Vận chuyển Bắc Nam</a></li>
+                    <li><a href='services.html'>Nâng hạ máy móc và hàng dự án</a></li>
+                    <li><a href='services.html'>Đóng kiện gỗ</a></li>
                   </ul>
                 </div>
               </div>
@@ -61,7 +61,7 @@ class HomePage extends React.Component {
                       <p className='m-b-30' style={{fontSize: 14, margin: 5}}>
                         MINH PHAT  LOGISTICS sở hữu đội ngũ nhân viên chứng từ chuyên nghiệp trong việc khai báo hải quan, làm thủ tục và xin các giấy phép, chứng nhận theo quy định của nhà nước...
                       </p>
-                      <a className='btn pull-right' href='#'>Xem thêm</a>
+                      <a className='btn pull-right' href='news_details.html'>Xem thêm</a>
                     </div>
                   </div>
 
@@ -74,7 +74,7 @@ class HomePage extends React.Component {
                       <p className='m-b-30' style={{fontSize: 14, margin: 5}}>
                         MINH PHAT  LOGISTICS là đại lý của các hãng hàng không Vietnam Airlines, Singapore Airlines, China Airline, Asiana Airlines, Qatar Airlines,…
                       </p>
-                      <a className='btn pull-right' href='#'>Xem thêm</a>
+                      <a className='btn pull-right' href='news_details.html'>Xem thêm</a>
                     </div>
                   </div>
                   <div className='col-md-4 col-sm-4 col-xs-6'>
@@ -86,7 +86,7 @@ class HomePage extends React.Component {
                       <p className='m-b-30' style={{fontSize: 14, margin: 5}}>
                         Với hệ thống đại lý là các master consolidator hàng đầu tại các cảng chuyển tải, MINH PHAT  LOGISTICS cung cấp dịch vụ LCL an toàn, hiệu quả ...
                       </p>
-                      <a className='btn pull-right' href='#'>Xem thêm</a>
+                      <a className='btn pull-right' href='news_details.html'>Xem thêm</a>
                     </div>
                   </div>
 
@@ -101,7 +101,7 @@ class HomePage extends React.Component {
                       <p className='m-b-30' style={{fontSize: 14, margin: 5}}>
                         Đáp ứng nhu cầu vận chuyển hàng hoá ngày một lớn giữa các doanh nghiệp ở hai miền Nam – Bắc, MINH PHAT  LOGISTICS xây dựng sản phẩm dịch vụ door – door hàng lẻ (consol) trực tiếp hàng tuần, ...
                       </p>
-                      <a className='btn pull-right' href='#'>Xem thêm</a>
+                      <a className='btn pull-right' href='news_details.html'>Xem thêm</a>
                     </div>
                   </div>
                   <div className='col-md-4 col-sm-4 col-xs-6'>
@@ -113,7 +113,7 @@ class HomePage extends React.Component {
                       <p className='m-b-30' style={{fontSize: 14, margin: 5}}>
                         MINH PHAT  LOGISTICS đang sở hữu các loại xe nâng, xe cẩu và xe cẩu tự hành và các trang thiết bị hiện đại. Bên cạnh đó là đội ngũ nhân viên lành nghề, nhiệt huyết cùng các chuyên gia giàu ...
                       </p>
-                      <a className='btn pull-right' href='#'>Xem thêm</a>
+                      <a className='btn pull-right' href='news_details.html'>Xem thêm</a>
                     </div>
                   </div>
                   <div className='col-md-4 col-sm-4 col-xs-6'>
@@ -125,7 +125,7 @@ class HomePage extends React.Component {
                       <p className='m-b-30' style={{fontSize: 14, margin: 5}}>
                         Thế mạnh cạnh tranh của MINH PHAT  LOGISTICS so với các công ty forwarder khác đó là cung cấp dịch vụ đóng gói hàng hóa...
                       </p>
-                      <a className='btn pull-right' href='#'>Xem thêm</a>
+                      <a className='btn pull-right' href='news_details.html'>Xem thêm</a>
                     </div>
                   </div>
                 </div>

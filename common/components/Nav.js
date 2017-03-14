@@ -54,20 +54,20 @@ class Nav extends React.Component {
                   <div className='addressbox' data-office='newyork'>
                     <div className='get-tuch text-left'><i className='icon-telephone114 color_red' />
                       <ul>
-                        <li><h4>+84 999 999 999</h4></li>
-                        <li><p className='p_14'>support@minhphatlogistics.com.vn</p></li>
+                        <li><h4>Hotline</h4></li>
+                        <li><p className='p_14'>043.201.9595</p></li>
                       </ul>
                     </div>
                     <div className='get-tuch text-left'><i className='icon-icons74 color_red' />
                       <ul>
-                        <li><h4>Tầng 7 tòa nhà sông Đà,</h4></li>
-                        <li><p className='p_14'>Đường Phạm Hùng, ...</p></li>
+                        <li><h4>Thời gian làm việc</h4></li>
+                        <li><p className='p_14'>08:00 - 17:00</p></li>
                       </ul>
                     </div>
                     <div className='get-tuch text-left'><i className='icon-alarmclock color_red' />
                       <ul>
-                        <li><h4>08:00 - 16:30</h4></li>
-                        <li><p className='p_14'>Thứ 2 đến thứ 6</p></li>
+                        <li><h4>Email</h4></li>
+                        <li><p className='p_14'>support@minhphatlogistics.com.vn</p></li>
                       </ul>
                     </div>
                   </div>
@@ -137,6 +137,7 @@ class Nav extends React.Component {
                     <li className='dropdown cool-link '><Link to='/'>Trang chủ</Link></li>
                     <li className='cool-link '><Link to='/about'>Giới thiệu</Link></li>
                     <li className='cool-link '><Link to='/services'>Dịch vụ</Link></li>
+                    <li className='cool-link '><Link to='/products'>Sản phẩm</Link></li>
                     <li className='cool-link '><Link to='/contact'>Liên hệ</Link></li>
                   </ul>
                 </div>

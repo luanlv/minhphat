@@ -14,7 +14,9 @@ export default function createRoutes (store) {
           require('./HomePage').default(store), // no need to modify store, no reducer
           require('./About').default(store), // no need to modify store, no reducer
           require('./Contact').default(store), // no need to modify store, no reducer
+          require('./Service').default(store), // no need to modify store, no reducer
           require('./Services').default(store), // no need to modify store, no reducer
+          require('./Products').default(store), // no need to modify store, no reducer
           require('./NotFound').default
         ])
       })

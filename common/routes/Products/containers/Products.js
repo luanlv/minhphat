@@ -55,7 +55,7 @@ class HomePage extends React.Component {
                       </div>
                       <h3 style={{marginBottom: 5, fontWeight: 'bold'}}>CARTON</h3>
                       <p className='m-b-30' style={{fontSize: 14, margin: 5}}>
-                        DDV sở hữu đội ngũ nhân viên chứng từ chuyên nghiệp trong việc khai báo hải quan, làm thủ tục và xin các giấy phép, chứng nhận theo quy định của nhà nước. Các dịch vụ cụ thể như sau: …
+                        MINH PHAT LOGISTICS sở hữu đội ngũ nhân viên chứng từ chuyên nghiệp trong việc khai báo hải quan, làm thủ tục và xin các giấy phép, chứng nhận theo quy định của nhà nước. Các dịch vụ cụ thể như sau: …
                       </p>
                       <a className='btn pull-right' href='#'>Xem thêm</a>
                     </div>
@@ -68,7 +68,7 @@ class HomePage extends React.Component {
                       </div>
                       <h3 style={{marginBottom: 5, fontWeight: 'bold'}}>PALLET GỖ</h3>
                       <p className='m-b-30' style={{fontSize: 14, margin: 5}}>
-                        DDV Logistics and Packing có một xưởng gỗ đặt tại Tiên Du, Bắc Ninh để phục vụ cho việc đóng kiện hàng hóa và sản xuất pallet gỗ. Pallet gỗ đảm bảo yêu cầu là gỗ khô, được hun trùng …
+                        MINH PHAT LOGISTICS Logistics and Packing có một xưởng gỗ đặt tại Tiên Du, Bắc Ninh để phục vụ cho việc đóng kiện hàng hóa và sản xuất pallet gỗ. Pallet gỗ đảm bảo yêu cầu là gỗ khô, được hun trùng …
                       </p>
                       <a className='btn pull-right' href='#'>Xem thêm</a>
                     </div>
@@ -80,7 +80,7 @@ class HomePage extends React.Component {
                       </div>
                       <h3 style={{marginBottom: 5, fontWeight: 'bold'}}>VẬT LIỆU ĐÓNG GÓI</h3>
                       <p className='m-b-30' style={{fontSize: 14, margin: 5}}>
-                        DDV Logistics and Packing cung cấp các loại vật liệu đóng gói hàng hóa, đặc biệt là dành cho xuất khẩu như: – Màng co PE – Túi chống ẩm – Dây hút ẩm trong container – Giấy bạc hút chân không …
+                        MINH PHAT LOGISTICS Logistics and Packing cung cấp các loại vật liệu đóng gói hàng hóa, đặc biệt là dành cho xuất khẩu như: – Màng co PE – Túi chống ẩm – Dây hút ẩm trong container – Giấy bạc hút chân không …
                       </p>
                       <a className='btn pull-right' href='#'>Xem thêm</a>
                     </div>

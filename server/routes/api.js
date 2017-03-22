@@ -8,19 +8,14 @@ const mongoose = require('mongoose')
 const User = mongoose.model('User')
 
 // Sub api
-let video = require('./api/video')
-let course = require('./api/course')
-let category = require('./api/category')
-let activecode = require('./api/activecode')
-let comment = require('./api/comment')
-let coupon = require('./api/coupon')
 let image = require('./api/image')
-let software = require('./api/software')
-let price = require('./api/price')
-let membership= require('./api/membership')
-let indexcourse = require('./api/indexcourse')
+let service = require('./api/service')
+let product = require('./api/product')
+let category = require('./api/category')
+let post = require('./api/post')
 
 router.post('/get', bodyParser.json() ,(req, res) => {
+  console.log(req.body)
   if(!req.body) res.sendStatus(400)
   // console.log('request /get')
   // console.log(req.body)
@@ -33,17 +28,11 @@ router.post('/get', bodyParser.json() ,(req, res) => {
     }))
 });
 
-router.use('/video', video)
-router.use('/course', course)
-router.use('/category', category)
-router.use('/activecode', activecode)
-router.use('/comment', comment)
-router.use('/coupon', coupon)
 router.use('/image', image)
-router.use('/software', software)
-router.use('/price', price)
-router.use('/membership', membership)
-router.use('/indexcourse', indexcourse)
+router.use('/service', service)
+router.use('/product', product)
+router.use('/category', category)
+router.use('/post', post)
 
 router.get('/', (req, res) => {
   console.log( 'get api request ')

@@ -136,8 +136,29 @@ class Nav extends React.Component {
                   <ul className='nav navbar-nav navbar-left' data-in='fadeInDown' data-out='fadeOutUp'>
                     <li className='dropdown cool-link '><Link to='/'>Trang chủ</Link></li>
                     <li className='cool-link '><Link to='/about'>Giới thiệu</Link></li>
-                    <li className='cool-link '><Link to='/services'>Dịch vụ</Link></li>
-                    <li className='cool-link '><Link to='/products'>Sản phẩm</Link></li>
+                    <li className='dropdown cool-link'>
+                      <Link to='/services' className='dropdown-toggle' data-toggle='dropdown' >Dịch vụ</Link>
+                      <ul className='dropdown-menu animated fadeOutUp' style={{display: 'none', opacity: 1}} >
+                        {this.props.props.tree.services.value.map((el, index) => {
+                          return (
+                            <li key={index}><Link to={'/services/' + el.slug}>{el.title}</Link></li>
+                          )
+                        })}
+                      </ul>
+                    </li>
+                    <li className='dropdown cool-link'>
+                      <Link to='/products' className='dropdown-toggle' data-toggle='dropdown' >Sản phẩm</Link>
+                      <ul className='dropdown-menu animated fadeOutUp' style={{display: 'none', opacity: 1}} >
+                        {this.props.props.tree.products.value.map((el, index) => {
+                          return (
+                            <li key={index}><Link to={'/products/' + el.slug}>{el.title}</Link></li>
+                          )
+                        })}
+                      </ul>
+                    </li>
+                    <li className='dropdown cool-link'>
+                      <Link to='/news' >Tin tức</Link>
+                    </li>
                     <li className='cool-link '><Link to='/contact'>Liên hệ</Link></li>
                   </ul>
                 </div>

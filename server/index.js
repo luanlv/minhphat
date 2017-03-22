@@ -39,11 +39,22 @@ export const createServer = (config) => {
 
   const app = express()
   let assets = null
+
+  var allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Origin,X-Requested-With,Content-Type,Accept');
+    next();
+  }
+
+  app.use(allowCrossDomain)
+
   app.use('/assets', express.static('public'))
   app.use('/assets', express.static('public/assets'))
   app.use('/image/get', express.static('_image'))
   app.use('/api', require('./routes/api'))
-  app.use('/token', require('./routes/token'))
+  app.use('/image', require('./routes/image'))
+  app.use('/admin', require('./routes/admin'))
   app.disable('x-powered-by')
   app.use(bodyParser.json())
   // app.use(bodyParser.urlencoded({ extended: true }))
@@ -268,7 +279,7 @@ function listen () {
 function connect () {
   var options = { server: { socketOptions: { keepAlive: 1 } } };
   mongoose.Promise = require('bluebird');
-  return mongoose.connect('mongodb://localhost/english', options).connection;
+  return mongoose.connect('mongodb://localhost/minhphat', options).connection;
 }
 
 connect()

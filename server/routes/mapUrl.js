@@ -1,33 +1,31 @@
 export default {
-  p1: {
-    url: 'http://localhost:3000/api/'
-  },
-
-  i1: {
-    url: 'http://localhost:3000/api/indexcourse/getOne'
-  },
-  p2: {
-    url: 'http://localhost:3000/api/price/getOne'
-  },
+  // s
   s1: {
-    url: 'http://localhost:3000/api/software/get'
-  },
-  c1: {
-    url: 'http://localhost:3000/api/course/getBySlug/'
-  },
-  v1: {
-    url: 'http://localhost:3000/api/video/getByCourseSlug/'
+    url: 'http://localhost:3000/api/service/getInfo'
   },
   s2: {
-    url: 'http://localhost:3000/api/software/getBySlug/'
+    url: 'http://localhost:3000/api/service/get/'
   },
-  c2: {
-    url: 'http://localhost:3000/api/course/getBySoftwareSlug/'
+
+  // p
+  p1: {
+    url: 'http://localhost:3000/api/product/getInfo'
   },
-  c3: {
-    url: 'http://localhost:3000/api/course/getByCategorySlug/'
+  p2: {
+    url: 'http://localhost:3000/api/product/get/'
   },
-  c4: {
-    url: 'http://localhost:3000/api/category/getBySlug/'
+  p3: {
+    url: 'http://localhost:3000/api/post/getPost'
+  },
+  p4: {
+    url:'http://localhost:3000/api/post/getNewest'
+  },
+  p5: {
+    url: 'http://localhost:3000/api/post/'
+  },
+
+  // c
+  c1: {
+    url: 'http://localhost:3000/api/category/get'
   }
 }

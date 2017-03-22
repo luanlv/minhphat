@@ -3,10 +3,9 @@ let mongoose = require('mongoose'),
 let autoIncrement = require('./autoIncrement')
 
 let ImageSchema = new Schema({
-  filename: String,
-  contentType: String,
-  path: String,
-  createAt: Date
+  uid: {type: String, validate: /\S+/, unique: true},
+  path: {type: String, validate: /\S+/, unique: true},
+  createAt: {type: Date, default: Date.now}
 }, { collection: 'image'});
 
 ImageSchema.plugin(autoIncrement.plugin, 'Image')

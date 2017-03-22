@@ -22,8 +22,8 @@ class App extends React.Component {
   render () {
     return (
       <div>
-        <Helmet title='Test' titleTemplate='%s - React Production Starter' />
-        <Nav />
+        <Helmet title='Trang chủ' titleTemplate='%s - Minh Phát Logistics' />
+        <Nav props={this.props} />
         {this.props.children}
         <Footer />
       </div>

@@ -1,13 +1,11 @@
 let mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 let autoIncrement = require('./autoIncrement')
-const ImageSchema = require('./image').schema;
 
 let CategorySchema = new Schema({
-  name: String,
-  cover: ImageSchema,
-  slug: String,
-  description: String
+  title: {type: String},
+  slug: {type: String, unique: true},
+  createAt: {type: Date, default: Date.now}
 }, { collection: 'category'});
 
 CategorySchema.plugin(autoIncrement.plugin, 'Category')

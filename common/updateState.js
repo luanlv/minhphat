@@ -4,83 +4,66 @@ export const newStateSuccess = function (state, data = []) {
   data.forEach((el) => {
     const key = el.req.v
 
-    if (key === 'p1') {
+    if (key === 's1') {
       result = Object.assign({}, result, {
-        posts: {
-          needUpdate: result.posts.needUpdate,
-          ok: el.ok,
-          isLoading: false,
-          value: el.value
-        }
-      })
-    } else if (key === 'i1') {
-      result = Object.assign({}, result, {
-        indexcourse: {
-          needUpdate: result.indexcourse.needUpdate,
-          ok: el.ok,
-          value: el.value
-        }
-      })
-    } else if (key === 'p2') {
-      result = Object.assign({}, result, {
-        price: {
-          needUpdate: result.price.needUpdate,
-          ok: el.ok,
-          value: el.value
-        }
-      })
-    } else if (key === 's1') {
-      result = Object.assign({}, result, {
-        software: {
-          needUpdate: result.software.needUpdate,
-          ok: el.ok,
-          value: el.value
-        }
-      })
-    } else if (key === 'c1') {
-      result = Object.assign({}, result, {
-        course: {
-          needUpdate: result.course.needUpdate,
-          ok: el.ok,
-          value: el.value
-        }
-      })
-    } else if (key === 'v1') {
-      result = Object.assign({}, result, {
-        videos: {
-          needUpdate: result.videos.needUpdate,
+        services: {
+          needUpdate: result.services.needUpdate,
           ok: el.ok,
           value: el.value
         }
       })
     } else if (key === 's2') {
       result = Object.assign({}, result, {
-        softInfo: {
-          needUpdate: result.softInfo.needUpdate,
+        service: {
+          needUpdate: result.service.needUpdate,
           ok: el.ok,
           value: el.value
         }
       })
-    } else if (key === 'c2') {
+    } else if (key === 'p1') {
       result = Object.assign({}, result, {
-        courseInSoftware: {
-          needUpdate: result.courseInSoftware.needUpdate,
+        products: {
+          needUpdate: result.products.needUpdate,
           ok: el.ok,
           value: el.value
         }
       })
-    } else if (key === 'c3') {
+    } else if (key === 'p2') {
       result = Object.assign({}, result, {
-        courseInCategory: {
-          needUpdate: result.courseInCategory.needUpdate,
+        product: {
+          needUpdate: result.product.needUpdate,
           ok: el.ok,
           value: el.value
         }
       })
-    } else if (key === 'c4') {
+    } else if (key === 'c1') {
       result = Object.assign({}, result, {
-        categoryInfo: {
-          needUpdate: result.categoryInfo.needUpdate,
+        categories: {
+          needUpdate: result.categories.needUpdate,
+          ok: el.ok,
+          value: el.value
+        }
+      })
+    } else if (key === 'p3') {
+      result = Object.assign({}, result, {
+        posts: {
+          needUpdate: result.posts.needUpdate,
+          ok: el.ok,
+          value: el.value
+        }
+      })
+    } else if (key === 'p4') {
+      result = Object.assign({}, result, {
+        newestPosts: {
+          needUpdate: result.newestPosts.needUpdate,
+          ok: el.ok,
+          value: el.value
+        }
+      })
+    } else if (key === 'p5') {
+      result = Object.assign({}, result, {
+        post: {
+          needUpdate: result.post.needUpdate,
           ok: el.ok,
           value: el.value
         }

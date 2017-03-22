@@ -2,7 +2,6 @@ let express    = require('express')
 let router = express.Router()
 const mongoose = require('mongoose')
 const User = mongoose.model('User')
-const Token = mongoose.model('Token')
 var passport = require("passport")
 var FacebookStrategy = require("passport-facebook").Strategy
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy
@@ -103,10 +102,7 @@ router.post('/signup', (req, res) => {
     else
       User.createUser(req.body, (err, user) => {
         if (err) throw err
-        Token.create({type: 'signup', email: user.username}, (err, token) => {
-          Mailer.sendActiveMail(user.username, user.name, 'http://localhost:3000/token/active/' + token.token)
-          res.json({status: true, m: user.username})
-        })
+        console.log(user)
       })
   })
 })

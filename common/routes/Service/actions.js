@@ -1,11 +1,11 @@
 import { LOAD_DATA_REQUEST, LOAD_DATA_SUCCESS, LOAD_DATA_FAILURE } from '../../constants'
-import {price, indexcourse, software} from '../../dataRequire'
+import * as getData from '../../dataRequire'
 
-export function loadData () {
+export function loadData (slug) {
   console.log('loadData')
   return (dispatch, getState, { axios }) => {
     const { protocol, host } = getState().sourceRequest
-    const requireList = requireData(getState())
+    const requireList = requireData(getState(), slug)
     dispatch({ type: LOAD_DATA_REQUEST, requireList: requireList })
     return axios.post(`${protocol}://${host}/api/get`, requireList)
       .then(res => {
@@ -25,10 +25,11 @@ export function loadData () {
   }
 }
 
-function requireData (state) {
+function requireData (state, slug) {
   var data = []
-  data = indexcourse(data, state)
-  data = price(data, state)
-  data = software(data, state)
+  data = getData.products(data, state)
+  data = getData.services(data, state)
+  data = getData.categories(data, state)
+  data = getData.service(data, state, slug)
   return data
 }

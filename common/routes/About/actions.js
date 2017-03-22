@@ -1,5 +1,5 @@
 import { LOAD_DATA_REQUEST, LOAD_DATA_SUCCESS, LOAD_DATA_FAILURE } from '../../constants'
-import {price, indexcourse, software} from '../../dataRequire'
+import * as getData from '../../dataRequire'
 
 export function loadData () {
   console.log('loadData')
@@ -27,8 +27,8 @@ export function loadData () {
 
 function requireData (state) {
   var data = []
-  data = indexcourse(data, state)
-  data = price(data, state)
-  data = software(data, state)
+  data = getData.products(data, state)
+  data = getData.services(data, state)
+  data = getData.categories(data, state)
   return data
 }

@@ -2,12 +2,12 @@
 import { provideHooks } from 'redial'
 import React from 'react'
 import { connect } from 'react-redux'
-// import { loadData } from '../actions'
+import { loadData } from '../actions'
 import Helmet from 'react-helmet'
-// import {Link} from 'react-router'
+import {Link} from 'react-router'
 
 const redial = {
-  // fetch: ({ dispatch }) => dispatch(loadData())
+  fetch: ({ dispatch }) => dispatch(loadData())
 }
 
 const mapStateToProps = state => ({
@@ -25,68 +25,47 @@ class HomePage extends React.Component {
   }
 
   render () {
+    const products = this.props.tree.products.value
+    console.log(products)
     return (
       <div >
-        <Helmet title='Services' />
-
+        <Helmet title='Các sản phẩm' />
         <section id='solution' className='p-t-100 p-b-100'>
           <div className='container'>
             <div className='row'>
               <div className='col-md-3 col-sm-12 col-xs-12'>
 
                 <div className='solution_tabs'>
-                  <h3>Các dịch vụ của Minh Phát</h3>
+                  <h3>Các sản phẩm của Minh Phát</h3>
                   <ul>
-                    <li className='active'><a href='#'>Tất cả các dịch vụ</a></li>
-                    <li><a href='#'>CARTON</a></li>
-                    <li><a href='#'>PALLET GỖ</a></li>
-                    <li><a href='#'>VẬT LIỆU ĐÓNG GÓI</a></li>
+                    <li className='active'><Link to='/products'>Tất cả các sản phẩm</Link></li>
+                    {products.map((el, index) => {
+                      return (
+                        <li key={index}><Link to={'/products/' + el.slug}>{el.title}</Link></li>
+                      )
+                    })}
                   </ul>
                 </div>
               </div>
 
               <div className='col-md-9 col-sm-12 col-xs-12'>
-                <div className='row'>
-
-                  <div className='col-md-4 col-sm-4 col-xs-6'>
-                    <div className='latest_page_box'>
-                      <div className='news_image' style={{marginBottom: 15}}>
-                        <img src='/assets/img/san_pham1.jpg' alt='image' />
+                {products.map((el, index) => {
+                  return (
+                    <div className='col-md-4 col-sm-4 col-xs-6' key={index}>
+                      <div className='latest_page_box'>
+                        <div className='news_image' style={{marginBottom: 15}}>
+                          {el.cover && <img src={'/image/' + el.cover.path} alt='image' />}
+                        </div>
+                        <h3 style={{marginBottom: 5, fontWeight: 'bold', textTransform: 'uppercase'}}>{el.title}</h3>
+                        <p className='m-b-30' style={{fontSize: 14, margin: 5}}>
+                          {el.description}
+                        </p>
+                        <br />
+                        <Link className='btn pull-right' to={'/products/' + el.slug} >Xem thêm</Link>
                       </div>
-                      <h3 style={{marginBottom: 5, fontWeight: 'bold'}}>CARTON</h3>
-                      <p className='m-b-30' style={{fontSize: 14, margin: 5}}>
-                        MINH PHAT LOGISTICS sở hữu đội ngũ nhân viên chứng từ chuyên nghiệp trong việc khai báo hải quan, làm thủ tục và xin các giấy phép, chứng nhận theo quy định của nhà nước. Các dịch vụ cụ thể như sau: …
-                      </p>
-                      <a className='btn pull-right' href='#'>Xem thêm</a>
                     </div>
-                  </div>
-
-                  <div className='col-md-4 col-sm-4 col-xs-6'>
-                    <div className='latest_page_box'>
-                      <div className='news_image' style={{marginBottom: 15}}>
-                        <img src='/assets/img/san_pham2.jpg' alt='image' />
-                      </div>
-                      <h3 style={{marginBottom: 5, fontWeight: 'bold'}}>PALLET GỖ</h3>
-                      <p className='m-b-30' style={{fontSize: 14, margin: 5}}>
-                        MINH PHAT LOGISTICS Logistics and Packing có một xưởng gỗ đặt tại Tiên Du, Bắc Ninh để phục vụ cho việc đóng kiện hàng hóa và sản xuất pallet gỗ. Pallet gỗ đảm bảo yêu cầu là gỗ khô, được hun trùng …
-                      </p>
-                      <a className='btn pull-right' href='#'>Xem thêm</a>
-                    </div>
-                  </div>
-                  <div className='col-md-4 col-sm-4 col-xs-6'>
-                    <div className='latest_page_box'>
-                      <div className='news_image' style={{marginBottom: 15}}>
-                        <img src='/assets/img/san_pham3.jpg' alt='image' />
-                      </div>
-                      <h3 style={{marginBottom: 5, fontWeight: 'bold'}}>VẬT LIỆU ĐÓNG GÓI</h3>
-                      <p className='m-b-30' style={{fontSize: 14, margin: 5}}>
-                        MINH PHAT LOGISTICS Logistics and Packing cung cấp các loại vật liệu đóng gói hàng hóa, đặc biệt là dành cho xuất khẩu như: – Màng co PE – Túi chống ẩm – Dây hút ẩm trong container – Giấy bạc hút chân không …
-                      </p>
-                      <a className='btn pull-right' href='#'>Xem thêm</a>
-                    </div>
-                  </div>
-
-                </div>
+                  )
+                })}
               </div>
 
             </div>

@@ -2,12 +2,12 @@
 import { provideHooks } from 'redial'
 import React from 'react'
 import { connect } from 'react-redux'
-// import { loadData } from '../actions'
+import { loadData } from '../actions'
 import Helmet from 'react-helmet'
 // import {Link} from 'react-router'
 
 const redial = {
-  // fetch: ({ dispatch }) => dispatch(loadData())
+  fetch: ({ dispatch }) => dispatch(loadData())
 }
 
 const mapStateToProps = state => ({

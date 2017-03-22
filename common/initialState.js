@@ -1,55 +1,52 @@
 export const initialStateApp = {
   loading: false,
   user: {},
+
+  post: {
+    ok: false,
+    needUpdate: false,
+    value: []
+  },
+
   posts: {
     ok: false,
-    needUpdate: true,
-    isLoading: true,
+    needUpdate: false,
     value: []
   },
-  indexcourse: {
+
+  newestPosts: {
     ok: false,
     needUpdate: false,
     value: []
   },
-  price: {
-    ok: false,
-    needUpdate: false,
-    value: {}
-  },
-  software: {
+
+  categories: {
     ok: false,
     needUpdate: false,
     value: []
   },
-  course: {
+
+  services: {
+    ok: false,
+    needUpdate: false,
+    value: []
+  },
+
+  service: {
     ok: false,
     needUpdate: true,
     value: {}
   },
-  videos: {
+
+  products: {
     ok: false,
-    needUpdate: true,
+    needUpdate: false,
     value: []
   },
-  softInfo: {
+
+  product: {
     ok: false,
     needUpdate: true,
     value: {}
-  },
-  categoryInfo: {
-    ok: false,
-    needUpdate: true,
-    value: {}
-  },
-  courseInSoftware: {
-    ok: false,
-    needUpdate: true,
-    value: []
-  },
-  courseInCategory: {
-    ok: false,
-    needUpdate: true,
-    value: []
   }
 }

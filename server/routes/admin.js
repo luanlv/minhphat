@@ -10,7 +10,7 @@ var proxy = require('express-http-proxy');
 const path = require('path')
 
 router.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname+'/../../public/admin/index.html'));
+  res.sendFile('index.html', { root: path.join(__dirname, '../../public/admin') });
 })
 
 

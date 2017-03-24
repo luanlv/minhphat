@@ -19,9 +19,6 @@ class Nav extends React.Component {
           <div className='container'>
             <div className='row'>
               <div className='col-md-4 col-sm-4 col-xs-12 p-0'>
-                <div className='hidden'>
-                  <h1>hidden</h1>
-                </div>
                 <p className='p_15 p-white p-t-10'>Chúng tôi có 10 năm kinh nghiệm trong lĩnh vực</p>
               </div>
               <div className='col-md-8 col-sm-8 col-xs-12 text-right p-0'>

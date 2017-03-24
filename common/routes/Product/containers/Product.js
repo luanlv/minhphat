@@ -29,11 +29,15 @@ class HomePage extends React.Component {
     const product = this.props.tree.product.value
     return (
       <div >
-        <Helmet title={product.title} />
+        <Helmet >
+          <title>{product.title}</title>
+          <meta name='description' content={product.description} />
+        </Helmet>
 
         <section id='solution' className='p-t-100 p-b-100'>
           <div className='container'>
             <div className='row'>
+              {JSON.stringify(product.description)}
               <div className='col-md-3 col-sm-12 col-xs-12'>
 
                 <div className='solution_tabs'>
@@ -50,6 +54,7 @@ class HomePage extends React.Component {
               </div>
 
               <div className='col-md-9 col-sm-12 col-xs-12'>
+                <h1 style={{fontSize: 26, marginBottom: 15}}>{product.title}</h1>
                 <div className='col-md-6 col-xs-12' dangerouslySetInnerHTML={{__html: product.content}} />
                 <div className='col-md-6 col-xs-12' >
                   {product.cover && <img src={'/image/' + product.cover.path} style={{width: '100%'}} alt={product.cover.path} />}

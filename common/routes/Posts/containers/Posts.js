@@ -30,10 +30,15 @@ class HomePage extends React.Component {
     const categories = this.props.tree.categories.value
     return (
       <div >
-        <Helmet title='Các sản phẩm' />
+        <Helmet >
+          <title>Tin tức</title>
+          <meta name='description' content='MINH PHAT LOGISTICS LOGISTICS AND PACKING Địa chỉ: Tầng 7 Tòa nhà Sông Đà 9, Đường Phạm Hùng, Phường Mỹ Đình 2 , Quận Nam Từ Liêm, Hà Nội, Việt Nam' />
+        </Helmet>
+
         <section id='solution' className='p-t-100 p-b-100'>
           <div className='container'>
             <div className='row'>
+              <h1 style={{fontSize: 22}}>Chuyên mục tin tức</h1>
               <div className='col-md-8'>
                 {posts.map((el, index) => {
                   return (

@@ -29,7 +29,10 @@ class HomePage extends React.Component {
     const service = this.props.tree.service.value
     return (
       <div >
-        <Helmet title={service.title} />
+        <Helmet >
+          <title>{service.title}</title>
+          <meta name='description' content={service.description} />
+        </Helmet>
 
         <section id='solution' className='p-t-100 p-b-100'>
           <div className='container'>
@@ -50,6 +53,7 @@ class HomePage extends React.Component {
               </div>
 
               <div className='col-md-9 col-sm-12 col-xs-12'>
+                <h1 style={{fontSize: 26, marginBottom: 15}}>{service.title}</h1>
                 <div className='col-md-6 col-xs-12' dangerouslySetInnerHTML={{__html: service.content}} />
                 <div className='col-md-6 col-xs-12' >
                   {service.cover && <img src={'/image/' + service.cover.path} style={{width: '100%'}} alt={service.cover.path} />}

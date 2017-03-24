@@ -29,9 +29,14 @@ class HomePage extends React.Component {
   render () {
     return (
       <div >
-        <Helmet title='Home page' />
+        <Helmet >
+          <title>Trang chủ</title>
+          <meta name='description' content='MINH PHAT LOGISTICS là một công ty cổ phần, 100% vốn đầu tư tư nhân được thành lập vào tháng 11 năm 2015 với số vốn điều lệ khoảng 5 tỷ đồng.' />
+        </Helmet>
         <Slider />
-        <Service services={this.props.tree.services.value} />
+        <Service
+          services={this.props.tree.services.value}
+        />
 
         <section id='bg_text' className='bg_3' style={{background: 'url(/assets/images/finance/bg.jpg) no-repeat', backgroundPosition: '50% -224px', backgroundAttachment: 'fixed'}}>
           <div className='container'>

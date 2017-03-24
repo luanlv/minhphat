@@ -31,7 +31,11 @@ class HomePage extends React.Component {
     console.log(post)
     return (
       <div >
-        <Helmet title='Các sản phẩm' />
+        <Helmet >
+          <title>{post.title}</title>
+          <meta name='description' content={post.description} />
+        </Helmet>
+
         <section id='solution' className='p-t-100 p-b-100'>
           <div className='container'>
             <div className='row'>
@@ -41,7 +45,7 @@ class HomePage extends React.Component {
                     {post.cover && <img src={'/image/' + post.cover.path} alt='image' />}
                   </div>
                   <p><span>Danh mục:</span> {post.category && post.category.map((el) => el.title + ', ')}</p>
-                  <h3>{post.title}</h3>
+                  <h1>{post.title}</h1>
                   <hr />
                   <div className='col-md-12' dangerouslySetInnerHTML={{__html: post.content}} />
                 </div>

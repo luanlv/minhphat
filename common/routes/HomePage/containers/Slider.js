@@ -9,7 +9,7 @@ class Slider extends React.Component {
           <ul>
             <li data-transition='fade'>
               <img src='/assets/images/finance/bannar_1.jpg' alt='' data-bgposition='center center' data-bgfit='cover' />
-              <h1 className='tp-caption tp-resizeme p-56'
+              <h3 className='tp-caption tp-resizeme p-56'
                 data-x='left'
                 data-y='280'
                 data-width='full'
@@ -19,7 +19,7 @@ class Slider extends React.Component {
                 data-mask_in='x:0px;y:0px;s:inherit;e:inherit;' data-mask_out='x:0;y:0;s:inherit;e:inherit;'
                 data-start='700'>
                 <span className='p-w-300'>Welcome</span>
-              </h1>
+              </h3>
               <h1 className='tp-caption  tp-resizeme p-56'
                 data-x='left'
                 data-y='340'
@@ -62,7 +62,7 @@ class Slider extends React.Component {
             </li>
             <li data-transition='fade'> <img src='/assets/images/finance/bannar_3.jpg' alt='' data-bgposition='center center' data-bgfit='cover' />
 
-              <h1 className='tp-caption  tp-resizeme p-56'
+              <h3 className='tp-caption  tp-resizeme p-56'
                 data-x='left'
                 data-y='330'
                 data-width='full'
@@ -73,7 +73,7 @@ class Slider extends React.Component {
                 data-mask_out='x:0;y:0;s:inherit;e:inherit;'
                 data-start='800'>
                 <span className='color_red text_bold'>DỊCH VỤ NHANH NHẤT</span>
-              </h1>
+              </h3>
               <div className='tp-caption  tp-resizeme'
                 data-x='left'
                 data-y='400'

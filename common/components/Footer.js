@@ -13,12 +13,12 @@ const Footer = ({props}) => {
           </div>
           <div className='col-md-6 text-center'>
             <ul className='footer_link'>
-              <li><a href='#'>TRANG CHỦ</a></li>
-              <li><a href='#'>GIỚI THIỆU</a></li>
-              <li><a href='#'>DỊCH VỤ</a></li>
-              <li><a href='#'>SẢN PHẨM</a></li>
-              <li><a href='#'>TIN TỨC</a></li>
-              <li><a href='#'>LIÊN HỆ</a></li>
+              <li><Link to='/'>Trang chủ</Link></li>
+              <li><Link to='/about'>Giới thiệu</Link></li>
+              <li><Link to='/services'>Dịch vụ</Link></li>
+              <li><Link to='/products'>Sản phẩm</Link></li>
+              <li><Link to='/news' >Tin tức</Link></li>
+              <li><Link to='/contact'>Liên hệ</Link></li>
             </ul>
           </div>
           <div className='col-md-3' />

@@ -27,7 +27,10 @@ class HomePage extends React.Component {
   render () {
     return (
       <div >
-        <Helmet title='About us' />
+        <Helmet >
+          <title>Contact</title>
+          <meta name='description' content='MINH PHAT LOGISTICS LOGISTICS AND PACKING Địa chỉ: Tầng 7 Tòa nhà Sông Đà 9, Đường Phạm Hùng, Phường Mỹ Đình 2 , Quận Nam Từ Liêm, Hà Nội, Việt Nam' />
+        </Helmet>
 
         <section id='contact_form' className='p-t-60 p-b-100'>
           <div className='container'>
@@ -81,8 +84,9 @@ class HomePage extends React.Component {
                       <br />
                       <strong>Địa chỉ:&nbsp;</strong>
                          Tầng 7 Tòa nhà Sông Đà 9, Đường Phạm Hùng, Phường Mỹ Đình 2 , Quận Nam Từ Liêm, Hà Nội, Việt Nam
+                      <br />
                       <strong>SDT:</strong> 0432019595<br />
-                      <strong>Fax:</strong> 0432019595<br />
+                      <strong>Fax:</strong> 0432069696<br />
                       <strong>Email:</strong> hiendv@minhphatlogistics.com.vn
                     </p>
                   </div>

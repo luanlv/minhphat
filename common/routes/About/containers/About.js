@@ -27,7 +27,10 @@ class HomePage extends React.Component {
   render () {
     return (
       <div >
-        <Helmet title='About us' />
+        <Helmet >
+          <title>About us</title>
+          <meta name='description' content='MINH PHAT LOGISTICS Logistics and Packing sẽ trở thành công ty hàng đầu trong lĩnh vực Giao nhận, Đóng gói hàng và hàng dự án' />
+        </Helmet>
 
         <section id='solution' className='p-t-80'>
           <div className='container'>
@@ -35,7 +38,7 @@ class HomePage extends React.Component {
               <div className='col-md-12'>
                 <div className='heading'>
                   <div className='heading_border bg_red' />
-                  <h2><span className='color_red'>Giới thiệu</span></h2>
+                  <h1><span className='color_red'>Giới thiệu</span></h1>
                   <p>Một số thông tin về Minh Phát</p>
                 </div>
               </div>

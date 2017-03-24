@@ -22,7 +22,7 @@ class App extends React.Component {
   render () {
     return (
       <div>
-        <Helmet title='Trang chủ' titleTemplate='%s - Minh Phát Logistics' />
+        <Helmet titleTemplate='%s - Minh Phát Logistics' />
         <Nav props={this.props} />
         {this.props.children}
         <Footer />

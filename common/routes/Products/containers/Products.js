@@ -29,7 +29,11 @@ class HomePage extends React.Component {
     console.log(products)
     return (
       <div >
-        <Helmet title='Các sản phẩm' />
+        <Helmet >
+          <title>Các sản phẩm</title>
+          <meta name='description' content='MINH PHAT LOGISTICS Logistics and Packing sẽ trở thành công ty hàng đầu trong lĩnh vực Giao nhận, Đóng gói hàng và hàng dự án' />
+        </Helmet>
+
         <section id='solution' className='p-t-100 p-b-100'>
           <div className='container'>
             <div className='row'>

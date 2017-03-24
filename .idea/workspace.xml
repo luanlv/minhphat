@@ -24,12 +24,11 @@
       <file leaf-file-name="Product.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/common/routes/Product/containers/Product.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="38" column="1" lean-forward="false" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+            <state relative-caret-position="372">
+              <caret line="61" column="18" lean-forward="false" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
               <folding>
                 <element signature="e#18#55#0" expanded="true" />
-                <marker date="1490385996897" expanded="true" signature="652:2075" ph="&lt;div/&gt;" />
-                <marker date="1490385996897" expanded="true" signature="813:2062" ph="&lt;section/&gt;" />
+                <element signature="e#875#2025#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -38,7 +37,7 @@
       <file leaf-file-name="Products.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/routes/Products/containers/Products.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
+            <state relative-caret-position="486">
               <caret line="32" column="37" lean-forward="false" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
               <folding />
             </state>
@@ -159,7 +158,6 @@
       <find>support@</find>
       <find>&quot;</find>
       <find>minh</find>
-      <find>nam</find>
       <find>nam</find>
       <find>h1</find>
       <find>title</find>
@@ -296,6 +294,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -663,7 +662,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -781,12 +779,13 @@
       <workItem from="1490351899822" duration="12105000" />
       <workItem from="1490375703744" duration="2095000" />
       <workItem from="1490382311219" duration="2006000" />
-      <workItem from="1490385951169" duration="47000" />
+      <workItem from="1490385951169" duration="72000" />
+      <workItem from="1490386196696" duration="73000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="222557000" />
+    <option name="totallyTimeSpent" value="222655000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-1" width="1368" height="770" extended-state="0" />
@@ -1187,7 +1186,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/routes/Products/containers/Products.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
+        <state relative-caret-position="486">
           <caret line="32" column="37" lean-forward="false" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
           <folding />
         </state>
@@ -1195,12 +1194,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/routes/Product/containers/Product.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="38" column="1" lean-forward="false" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+        <state relative-caret-position="372">
+          <caret line="61" column="18" lean-forward="false" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
           <folding>
             <element signature="e#18#55#0" expanded="true" />
-            <marker date="1490385996897" expanded="true" signature="652:2075" ph="&lt;div/&gt;" />
-            <marker date="1490385996897" expanded="true" signature="813:2062" ph="&lt;section/&gt;" />
+            <element signature="e#875#2025#0" expanded="false" />
           </folding>
         </state>
       </provider>

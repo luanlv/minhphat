@@ -36,7 +36,7 @@ class HomePage extends React.Component {
 
         <section id='solution' className='p-t-100 p-b-100'>
           <div className='container'>
-c              <div className='col-md-3 col-sm-12 col-xs-12'>
+              <div className='col-md-3 col-sm-12 col-xs-12'>
 
                 <div className='solution_tabs'>
                   <h3>Các sản phẩm của Minh Phát</h3>
@@ -60,7 +60,6 @@ c              <div className='col-md-3 col-sm-12 col-xs-12'>
               </div>
 
             </div>
-          </div>
         </section>
       </div>
     )

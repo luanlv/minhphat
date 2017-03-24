@@ -91,10 +91,18 @@ export const createServer = (config) => {
 
   app.get('*', (req, res) => {
 
-    initialStateApp.sourceRequest = {
-      protocol: req.headers['x-forwarded-proto'] || req.protocol,
-      host: req.headers.host
+    if (__PROD__) {
+      initialStateApp.sourceRequest = {
+        protocol: req.headers['x-forwarded-proto'] || req.protocol,
+        host: 'new.minhphatlogistics.com.vn'
+      }
+    } else {
+      initialStateApp.sourceRequest = {
+        protocol: req.headers['x-forwarded-proto'] || req.protocol,
+        host: req.headers.host
+      }
     }
+
 
     if(req.user){
       initialStateApp.user = getUserInfo(req.user)

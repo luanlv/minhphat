@@ -28,6 +28,7 @@ class HomePage extends React.Component {
     const post = this.props.tree.post.value
     const newestPosts = this.props.tree.newestPosts.value
     const categories = this.props.tree.categories.value
+    console.log(post)
     return (
       <div >
         <Helmet title='Các sản phẩm' />
@@ -39,7 +40,7 @@ class HomePage extends React.Component {
                   <div className='news_image'>
                     {post.cover && <img src={'/image/' + post.cover.path} alt='image' />}
                   </div>
-                  <p><span>Danh mục:</span> {post.category.map((el) => el.title + ', ')}</p>
+                  <p><span>Danh mục:</span> {post.category && post.category.map((el) => el.title + ', ')}</p>
                   <h3>{post.title}</h3>
                   <hr />
                   <div className='col-md-12' dangerouslySetInnerHTML={{__html: post.content}} />

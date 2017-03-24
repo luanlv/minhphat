@@ -67,7 +67,7 @@ class Nav extends React.Component {
                     <div className='get-tuch text-left'><i className='icon-alarmclock color_red' />
                       <ul>
                         <li><h4>Email</h4></li>
-                        <li><p className='p_14'>support@minhphatlogistics.com.vn</p></li>
+                        <li><p className='p_14'>hiendv@minhphatlogistics.com.vn</p></li>
                       </ul>
                     </div>
                   </div>
@@ -75,7 +75,7 @@ class Nav extends React.Component {
                     <div className='get-tuch text-left'><i className='icon-telephone114 color_red' />
                       <ul>
                         <li><h4>+84 999 999 999</h4></li>
-                        <li><p className='p_14'>support@minhphatlogistics.com.vn</p></li>
+                        <li><p className='p_14'>hiendv@minhphatlogistics.com.vn</p></li>
                       </ul>
                     </div>
                     <div className='get-tuch text-left'><i className='icon-icons74 color_red' />
@@ -95,7 +95,7 @@ class Nav extends React.Component {
                     <div className='get-tuch text-left'><i className='icon-telephone114 color_red' />
                       <ul>
                         <li><h4>+84 999 999 999</h4></li>
-                        <li><p className='p_14'>support@minhphatlogistics.com.vn</p></li>
+                        <li><p className='p_14'>hiendv@minhphatlogistics.com.vn</p></li>
                       </ul>
                     </div>
                     <div className='get-tuch text-left'><i className='icon-icons74 color_red' />

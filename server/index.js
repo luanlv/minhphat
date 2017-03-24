@@ -94,7 +94,7 @@ export const createServer = (config) => {
     if (__PROD__) {
       initialStateApp.sourceRequest = {
         protocol: req.headers['x-forwarded-proto'] || req.protocol,
-        host: 'new.minhphatlogistics.com.vn'
+        host: 'minhphatlogistics.com.vn'
       }
     } else {
       initialStateApp.sourceRequest = {

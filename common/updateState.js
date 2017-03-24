@@ -4,8 +4,6 @@ export const newStateSuccess = function (state, data = []) {
   data.forEach((el) => {
     const key = el.req.v
     result = Object.assign({}, result)
-    console.log('before')
-    console.log(result)
     if (key === 's1') {
       result.services = {
         needUpdate: result.services.needUpdate,
@@ -55,9 +53,6 @@ export const newStateSuccess = function (state, data = []) {
         value: el.value
       }
     }
-
-    console.log('after')
-    console.log(result)
   })
   return result
 }

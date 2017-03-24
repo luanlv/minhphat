@@ -4,7 +4,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { loadData } from '../actions'
 import Helmet from 'react-helmet'
-// import {Link} from 'react-router'
+import {Link} from 'react-router'
 import Slider from './Slider'
 import Service from './Service'
 
@@ -31,7 +31,7 @@ class HomePage extends React.Component {
       <div >
         <Helmet title='Home page' />
         <Slider />
-        <Service />
+        <Service services={this.props.tree.services.value} />
 
         <section id='bg_text' className='bg_3' style={{background: 'url(/assets/images/finance/bg.jpg) no-repeat', backgroundPosition: '50% -224px', backgroundAttachment: 'fixed'}}>
           <div className='container'>
@@ -48,27 +48,17 @@ class HomePage extends React.Component {
             <div className='row'>
               <div className='col-md-12'>
                 <div id='latest_news-slider_1' className=' owl-carousel margin-top-65'>
-                  <div className='item'>
-                    <div className='feature_box'>
-                      <i className='icon-stick-man' />
-                      <h3>Carton</h3>
-                      <p>MINH PHAT  LOGISTICS sở hữu đội ngũ nhân viên chứng từ chuyên nghiệp trong việc khai báo hải quan, làm thủ tục và xin các giấy phép, chứng nhận theo quy định của nhà nước. Các dịch vụ cụ thể như sau: …</p>
-                    </div>
-                  </div>
-                  <div className='item'>
-                    <div className='feature_box'>
-                      <i className='icon-presentation-4' />
-                      <h3>PALLET GỖ</h3>
-                      <p>MINH PHAT  LOGISTICS Logistics and Packing có một xưởng gỗ đặt tại Tiên Du, Bắc Ninh để phục vụ cho việc đóng kiện hàng hóa và sản xuất pallet gỗ. Pallet gỗ đảm bảo yêu cầu là gỗ khô, được hun trùng trước …</p>
-                    </div>
-                  </div>
-                  <div className='item'>
-                    <div className='feature_box'>
-                      <i className='icon-website' />
-                      <h3>VẬT LIỆU ĐÓNG GÓI</h3>
-                      <p>MINH PHAT  LOGISTICS Logistics and Packing cung cấp các loại vật liệu đóng gói hàng hóa, đặc biệt là dành cho xuất khẩu như: – Màng co PE – Túi chống ẩm – Dây hút ẩm trong container – Giấy bạc hút chân không …</p>
-                    </div>
-                  </div>
+                  {this.props.tree.products.value.map((product, index) => {
+                    return (
+                      <div className='item' key={index}>
+                        <div className='feature_box'>
+                          <i className='fa fa-rebel' />
+                          <h3>{product.title}</h3>
+                          <p>{product.description}</p>
+                        </div>
+                      </div>
+                    )
+                  })}
                 </div>
               </div>
             </div>
@@ -112,46 +102,16 @@ class HomePage extends React.Component {
                 </div>
 
                 <div id='latest_news-slider' className='owl-carousel p-t-40'>
-                  <div className='item'>
-                    <div className='latest_box'>
-                      <a href='#'><h3>Secure strong revenue growth</h3></a>
-                      <p>Aliquam ultrices venenatis mauris. Vestibulum ante ipsum primis in faucibus...</p>
-                      <div className='lates_border m-b-25' />
-                      <img src='/assets/images/latest_news.png' alt='image' />
-                      <span>by Michael Jordan</span>
-                      <i className='icon-icons228' /> <span>14 Feb 2016</span>
-                    </div>
-                  </div>
-                  <div className='item'>
-                    <div className='latest_box'>
-                      <a href='#'><h3>Need for growth and reliabilty</h3></a>
-                      <p>Aliquam ultrices venenatis mauris. Vestibulum ante ipsum primis in faucibus...</p>
-                      <div className='lates_border m-b-25' />
-                      <img src='/assets/images/latest_news.png' alt='image' />
-                      <span>by Michael Jordan</span>
-                      <i className='icon-icons228' /> <span>14 Feb 2016</span>
-                    </div>
-                  </div>
-                  <div className='item'>
-                    <div className='latest_box'>
-                      <a href='#'><h3>Secure strong revenue growth</h3></a>
-                      <p>Aliquam ultrices venenatis mauris. Vestibulum ante ipsum primis in faucibus...</p>
-                      <div className='lates_border m-b-25' />
-                      <img src='/assets/images/latest_news.png' alt='image' />
-                      <span>by Michael Jordan</span>
-                      <i className='icon-icons228' /> <span>14 Feb 2016</span>
-                    </div>
-                  </div>
-                  <div className='item'>
-                    <div className='latest_box'>
-                      <a href='#'><h3>Need for growth and reliabilty</h3></a>
-                      <p>Aliquam ultrices venenatis mauris. Vestibulum ante ipsum primis in faucibus...</p>
-                      <div className='lates_border m-b-25' />
-                      <img src='/assets/images/latest_news.png' alt='image' />
-                      <span>by Michael Jordan</span>
-                      <i className='icon-icons228' /> <span>14 Feb 2016</span>
-                    </div>
-                  </div>
+                  {this.props.tree.posts.value.map((p, index) => {
+                    return (
+                      <div className='item' key={index}>
+                        <div className='latest_box'>
+                          <Link to={'/news/' + p.slug}><h3>{p.title}</h3></Link>
+                          <p>{p.description}</p>
+                        </div>
+                      </div>
+                    )
+                  })}
                 </div>
               </div>
               <div className='col-md-4 col-sm-4 col-xs-12'>

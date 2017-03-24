@@ -3,72 +3,61 @@ export const newStateSuccess = function (state, data = []) {
 
   data.forEach((el) => {
     const key = el.req.v
-
+    result = Object.assign({}, result)
+    console.log('before')
+    console.log(result)
     if (key === 's1') {
-      result = Object.assign({}, result, {
-        services: {
-          needUpdate: result.services.needUpdate,
-          ok: el.ok,
-          value: el.value
-        }
-      })
+      result.services = {
+        needUpdate: result.services.needUpdate,
+        ok: el.ok,
+        value: el.value
+      }
     } else if (key === 's2') {
-      result = Object.assign({}, result, {
-        service: {
-          needUpdate: result.service.needUpdate,
-          ok: el.ok,
-          value: el.value
-        }
-      })
+      result.service = {
+        needUpdate: result.service.needUpdate,
+        ok: el.ok,
+        value: el.value
+      }
     } else if (key === 'p1') {
-      result = Object.assign({}, result, {
-        products: {
-          needUpdate: result.products.needUpdate,
-          ok: el.ok,
-          value: el.value
-        }
-      })
+      result.products = {
+        needUpdate: result.products.needUpdate,
+        ok: el.ok,
+        value: el.value
+      }
     } else if (key === 'p2') {
-      result = Object.assign({}, result, {
-        product: {
-          needUpdate: result.product.needUpdate,
-          ok: el.ok,
-          value: el.value
-        }
-      })
+      result.product = {
+        needUpdate: result.product.needUpdate,
+        ok: el.ok,
+        value: el.value
+      }
     } else if (key === 'c1') {
-      result = Object.assign({}, result, {
-        categories: {
-          needUpdate: result.categories.needUpdate,
-          ok: el.ok,
-          value: el.value
-        }
-      })
+      result.categories = {
+        needUpdate: result.categories.needUpdate,
+        ok: el.ok,
+        value: el.value
+      }
     } else if (key === 'p3') {
-      result = Object.assign({}, result, {
-        posts: {
-          needUpdate: result.posts.needUpdate,
-          ok: el.ok,
-          value: el.value
-        }
-      })
+      result.posts = {
+        needUpdate: result.posts.needUpdate,
+        ok: el.ok,
+        value: el.value
+      }
     } else if (key === 'p4') {
-      result = Object.assign({}, result, {
-        newestPosts: {
-          needUpdate: result.newestPosts.needUpdate,
-          ok: el.ok,
-          value: el.value
-        }
-      })
+      result.newestPosts = {
+        needUpdate: result.newestPosts.needUpdate,
+        ok: el.ok,
+        value: el.value
+      }
     } else if (key === 'p5') {
-      result = Object.assign({}, result, {
-        post: {
-          needUpdate: result.post.needUpdate,
-          ok: el.ok,
-          value: el.value
-        }
-      })
+      result.post = {
+        needUpdate: result.post.needUpdate,
+        ok: el.ok,
+        value: el.value
+      }
     }
+
+    console.log('after')
+    console.log(result)
   })
   return result
 }

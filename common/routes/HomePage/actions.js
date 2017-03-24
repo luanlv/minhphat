@@ -30,5 +30,6 @@ function requireData (state) {
   data = getData.products(data, state)
   data = getData.services(data, state)
   data = getData.categories(data, state)
+  data = getData.posts(data, state)
   return data
 }

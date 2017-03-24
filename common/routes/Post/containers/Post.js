@@ -37,7 +37,7 @@ class HomePage extends React.Component {
               <div className='col-md-8'>
                 <div className='latest_page_box'>
                   <div className='news_image'>
-                    <img src={'/image/' + post.cover.path} alt='image' />
+                    {post.cover && <img src={'/image/' + post.cover.path} alt='image' />}
                   </div>
                   <p><span>Danh mục:</span> {post.category.map((el) => el.title + ', ')}</p>
                   <h3>{post.title}</h3>

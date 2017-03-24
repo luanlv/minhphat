@@ -50,9 +50,9 @@ class HomePage extends React.Component {
                     <p>Tên giao dịch : <strong>MINH PHAT LOGISTICS</strong></p>
                     <p>Địa chỉ: Tầng 7 Tòa nhà Sông Đà 9, Đường Phạm Hùng, Phường Mỹ Đình 2 , Quận Nam Từ Liêm, Hà Nội, Việt Nam</p>
                     <p>Điện thoại: 0432019595</p>
-                    <p>Fax: 0432019595</p>
+                    <p>Fax: 0432069696</p>
                     <p>Email: hiendv@minhphatlogistics.com.vn</p>
-                    <p>MINH PHAT  LOGISTICS là một công ty cổ phần, 100% vốn đầu tư tư nhân được thành lập vào tháng …  năm …  với số vốn điều lệ … tỷ đồng. (Đang cập nhập)</p>
+                    <p>MINH PHAT LOGISTICS là một công ty cổ phần, 100% vốn đầu tư tư nhân được thành lập vào tháng 11 năm 2015 với số vốn điều lệ khoảng 5 tỷ đồng.</p>
                     <br />
                     <p><strong>Lĩnh vực hoạt động:</strong></p>
                     <ul style={{listStyle: 'circle', paddingLeft: 20, marginTop: 5}}>

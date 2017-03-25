@@ -68,7 +68,7 @@ export const createServer = (config) => {
   app.use(passport.initialize())
   app.use(passport.session())
 
-  if (__PROD__ || __TEST__) {
+  iconsole.log(f (__PROD__ || __TEST__) {
     app.use(morgan('combined'))
     app.use(helmet())
     app.use(hpp())
@@ -90,7 +90,7 @@ export const createServer = (config) => {
   app.use('/auth', require('./routes/auth'))
 
   app.get('*', (req, res) => {
-
+    console.log(req.headers.host)
     if (__PROD__) {
       initialStateApp.sourceRequest = {
         protocol: req.headers['x-forwarded-proto'] || req.protocol,

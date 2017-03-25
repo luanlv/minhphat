@@ -27,7 +27,7 @@ export default class Service extends React.Component {
                       <div className='services'>
                         <div className='image_s'>
                           <Link to={'/services/' + service.slug}>
-                            {service.cover && <img src={'/image/' + service.cover.path} alt='Owl Image' /> }
+                            {service.cover && <img src={'/image/' + service.cover.path} alt='Owl Image' />}
                           </Link>
                         </div>
                         <h3 className='text-uppercase'><span>{index}</span>{service.title}</h3>

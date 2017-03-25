@@ -6,9 +6,9 @@ const mongoose = require('mongoose')
 const Post = mongoose.model('Post')
 
 router.get('/get', (req, res) => {
-  let lang = req.query.lang ? req.query.lang : 'vi'
+  let query = req.query.lang ? {lang: req.query.lang} : {}
   Post.aggregate([{
-    $match: {lang: lang}
+    $match: query
   },{
     $lookup: {
       from: 'category',
@@ -38,10 +38,9 @@ router.get('/get2', (req, res) => {
 })
 
 router.get('/getNewest', (req, res) => {
-  let lang = req.query.lang ? req.query.lang : 'vi'
-  console.log('get newest')
+  let query = req.query.lang ? {lang: req.query.lang} : {}
   Post.aggregate([{
-    $match: {lang: lang}
+    $match: query
   },{
     $sort: {createAt: -1}
   },{
@@ -65,9 +64,9 @@ router.get('/getNewest', (req, res) => {
 })
 
 router.get('/getPost', (req, res) => {
-  let lang = req.query.lang ? req.query.lang : 'vi'
+  let query = req.query.lang ? {lang: req.query.lang} : {}
   Post.aggregate([{
-    $match: {lang: lang}
+    $match: query
   },{
     $sort: {createAt: -1}
   },{

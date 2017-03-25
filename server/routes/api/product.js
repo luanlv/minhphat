@@ -27,8 +27,8 @@ router.post('/', bodyParser.json() ,(req, res) => {
 })
 
 router.get('/getInfo', (req, res) => {
-  let lang = req.query.lang ? req.query.lang : 'vi'
-  Product.find({lang: lang})
+  let query = req.query.lang ? {lang: req.query.lang} : {}
+  Product.find(query)
     .select({ "slug": 1, "title": 1, "description": 1, "cover": 1})
     .exec((err, products) => {
       if(err) res.sendStatus(400)

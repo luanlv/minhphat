@@ -6,8 +6,8 @@ const mongoose = require('mongoose')
 const Service = mongoose.model('Service')
 
 router.get('/get', (req, res) => {
-  let lang = req.query.lang ? req.query.lang : 'vi'
-  Service.find({lang: lang}, (err, services) => {
+  let query = req.query.lang ? {lang: req.query.lang} : {}
+  Service.find(query, (err, services) => {
     if(err) res.sendStatus(400)
     res.send(services)
   })
@@ -21,8 +21,8 @@ router.get('/get/:slug', (req, res) => {
 })
 
 router.get('/getInfo', (req, res) => {
-  let lang = req.query.lang ? req.query.lang : 'vi'
-  Service.find({lang: lang})
+  let query = req.query.lang ? {lang: req.query.lang} : {}
+  Service.find(query)
     .select({ "slug": 1, "title": 1, "description": 1, "cover": 1})
     .exec((err, services) => {
       if(err) res.sendStatus(400)

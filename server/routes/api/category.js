@@ -6,8 +6,8 @@ const mongoose = require('mongoose')
 const Category = mongoose.model('Category')
 
 router.get('/get', (req, res) => {
-  let lang = req.query.lang ? req.query.lang : 'vi'
-  Category.find({lang: lang}, (err, categories) => {
+  let query = req.query.lang ? {lang: req.query.lang} : {}
+  Category.find(query, (err, categories) => {
     if(err) res.sendStatus(400)
     res.send(categories)
   })

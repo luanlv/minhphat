@@ -15,12 +15,12 @@ let category = require('./api/category')
 let post = require('./api/post')
 
 router.post('/get', bodyParser.json() ,(req, res) => {
-  console.log(req.body)
+  let lang = req.query.lang ? req.query.lang : 'vi'
   if(!req.body) res.sendStatus(400)
   // console.log('request /get')
   // console.log(req.body)
   let listData = req.body
-  axios.all(asyncAxios(listData))
+  axios.all(asyncAxios(listData, lang))
     .then(axios.spread((...args) => {
       // console.log('respond /get')
       // console.log(args)
@@ -35,7 +35,6 @@ router.use('/category', category)
 router.use('/post', post)
 
 router.get('/', (req, res) => {
-  console.log( 'get api request ')
   setTimeout(() => {
     res.status(200).json(fakeDB)
   }, 300)
@@ -57,7 +56,7 @@ router.get('/:slug', (req, res) => {
 module.exports = router
 
 
-function asyncAxios(listData){
+function asyncAxios(listData, lang){
   console.log(' async Axios !!')
   let result = []
   listData.forEach((el, index) => {
@@ -68,6 +67,7 @@ function asyncAxios(listData){
       url = map[el.v].url + el.e
     }
     if (url) {
+      url = url + '?lang=' + lang
       result.push(axios.get(url).then((res) => { return {
         ok: true, value: res.data, req: el
       }}).catch(() => { return {

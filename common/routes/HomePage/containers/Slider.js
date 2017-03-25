@@ -3,6 +3,7 @@ import {Link} from 'react-router'
 
 class Slider extends React.Component {
   render () {
+    const isEn = this.props.isEn
     return (
       <section className='rev_slider_wrapper'>
         <div id='rev_slider' className='rev_slider' data-version='5.0'>
@@ -44,7 +45,7 @@ class Slider extends React.Component {
                 data-mask_in='x:0px;y:0px;s:inherit;e:inherit;'
                 data-mask_out='x:0;y:0;s:inherit;e:inherit;'
                 data-start='1000'>
-                <p className='p_20'>Hệ thống vận tải chuyên nghiệp – uy tín – chất lượng.</p>
+                {isEn ? (<p className='p_20'>Fastest services & pro services</p>) : (<p className='p_20'>Hệ thống vận tải chuyên nghiệp – uy tín – chất lượng.</p>)}
               </div>
               <div className='tp-caption  tp-resizeme'
                 data-x='left'
@@ -56,8 +57,10 @@ class Slider extends React.Component {
                 data-mask_in='x:0px;y:0px;s:inherit;e:inherit;'
                 data-mask_out='x:0;y:0;s:inherit;e:inherit;'
                 data-start='1500'>
-                <Link to='/services' className='btn-light'>Dịch vụ</Link>
-                <Link to='/contact' className='btn-dark button-black'>Liên hệ</Link>
+                {isEn ? (<Link to='/services' className='btn-light'>Services</Link>)
+                  : (<Link to='/services' className='btn-light'>Dịch vụ</Link>)}
+                {isEn ? (<Link to='/contact' className='btn-dark button-black'>Contact</Link>)
+                  : (<Link to='/contact' className='btn-dark button-black'>Liên hệ</Link>)}
               </div>
             </li>
             <li data-transition='fade'> <img src='/assets/images/finance/bannar_3.jpg' alt='' data-bgposition='center center' data-bgfit='cover' />
@@ -72,7 +75,7 @@ class Slider extends React.Component {
                 data-mask_in='x:0px;y:0px;s:inherit;e:inherit;'
                 data-mask_out='x:0;y:0;s:inherit;e:inherit;'
                 data-start='800'>
-                <span className='color_red text_bold'>DỊCH VỤ NHANH NHẤT</span>
+                {isEn ? (<span className='color_red text_bold'>FASTEST SERVICES</span>) : (<span className='color_red text_bold'>DỊCH VỤ NHANH NHẤT</span>)}
               </h3>
               <div className='tp-caption  tp-resizeme'
                 data-x='left'
@@ -84,7 +87,8 @@ class Slider extends React.Component {
                 data-mask_in='x:0px;y:0px;s:inherit;e:inherit;'
                 data-mask_out='x:0;y:0;s:inherit;e:inherit;'
                 data-start='800'>
-                <p className='p_20 color_white'>Không ngừng phát triển dịch vụ vận tải, chúng tôi cam kết mang đến cho quý khách hàng một dịch vụ chuyển nghiệp nhất.</p>
+                {isEn ? (<p className='p_20 color_white'>Professional transport systems – reputation – quality, helping you to quickly transport their goods.</p>)
+                  : (<p className='p_20 color_white'>Không ngừng phát triển dịch vụ vận tải, chúng tôi cam kết mang đến cho quý khách hàng một dịch vụ chuyển nghiệp nhất.</p>)}
               </div>
               <div className='tp-caption  tp-resizeme'
                 data-x='left'
@@ -96,8 +100,10 @@ class Slider extends React.Component {
                 data-mask_in='x:0px;y:0px;s:inherit;e:inherit;'
                 data-mask_out='x:0;y:0;s:inherit;e:inherit;'
                 data-start='800'>
-                <Link to='/services' className='btn-light'>Dịch vụ</Link>
-                <Link to='/contact' className='btn-dark button-black'>Liên hệ</Link>
+                {isEn ? (<Link to='/services' className='btn-light'>Services</Link>)
+                  : (<Link to='/services' className='btn-light'>Dịch vụ</Link>)}
+                {isEn ? (<Link to='/contact' className='btn-dark button-black'>Contact</Link>)
+                  : (<Link to='/contact' className='btn-dark button-black'>Liên hệ</Link>)}
               </div>
 
             </li>

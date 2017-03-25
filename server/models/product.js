@@ -9,6 +9,7 @@ let ProductSchema = new Schema({
   description: {type: String},
   cover: {type: ImageSchema},
   content: {type: String},
+  lang: {type: String, default: 'vi'},
   createAt: {type: Date, default: Date.now}
 }, { collection: 'product'});
 

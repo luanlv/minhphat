@@ -28,7 +28,7 @@ class HomePage extends React.Component {
     const post = this.props.tree.post.value
     const newestPosts = this.props.tree.newestPosts.value
     const categories = this.props.tree.categories.value
-    console.log(post)
+    var isEn = this.props.tree.sourceRequest.host.slice(0, 3) === 'en.'
     return (
       <div >
         <Helmet >
@@ -53,7 +53,11 @@ class HomePage extends React.Component {
               <div className='col-md-4 col-sm-4 col-xs-12'>
                 <div className='row p-t-60'>
                   <div className='col-md-12'>
-                    <h3>Tin mới nhất</h3>
+                    {isEn ? (
+                      <h3>Newest</h3>
+                      ) : (
+                      <h3>Tin mới nhất</h3>
+                      )}
                     {newestPosts.map((el, index) => {
                       return (
                         <div className='media p-t-20 p-b-20' key={index}>
@@ -71,7 +75,11 @@ class HomePage extends React.Component {
 
                 <div className='row p-t-60'>
                   <div className='col-md-12'>
-                    <h3>Danh mục</h3>
+                    {isEn ? (
+                      <h3>Categories</h3>
+                      ) : (
+                      <h3>Danh mục</h3>
+                      )}
                   </div>
                   <div className='col-md-12'>
                     <ul className='pro-list p-t-25'>

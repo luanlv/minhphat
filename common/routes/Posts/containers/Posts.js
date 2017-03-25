@@ -28,17 +28,27 @@ class HomePage extends React.Component {
     const posts = this.props.tree.posts.value
     const newestPosts = this.props.tree.newestPosts.value
     const categories = this.props.tree.categories.value
+    var isEn = this.props.tree.sourceRequest.host.slice(0, 3) === 'en.'
     return (
       <div >
-        <Helmet >
-          <title>Tin tức</title>
-          <meta name='description' content='MINH PHAT LOGISTICS LOGISTICS AND PACKING Địa chỉ: Tầng 7 Tòa nhà Sông Đà 9, Đường Phạm Hùng, Phường Mỹ Đình 2 , Quận Nam Từ Liêm, Hà Nội, Việt Nam' />
-        </Helmet>
+        {isEn ? (
+          <Helmet >
+            <title>News</title>
+          </Helmet>
+          ) : (
+          <Helmet >
+            <title>Tin tức</title>
+          </Helmet>
+          )}
 
         <section id='solution' className='p-t-100 p-b-100'>
           <div className='container'>
             <div className='row'>
-              <h1 style={{fontSize: 22}}>Chuyên mục tin tức</h1>
+              {isEn ? (
+                <h1 style={{fontSize: 22}}>News</h1>
+                ) : (
+                <h1 style={{fontSize: 22}}>Chuyên mục tin tức</h1>
+                )}
               <div className='col-md-8'>
                 {posts.map((el, index) => {
                   return (
@@ -59,7 +69,11 @@ class HomePage extends React.Component {
               <div className='col-md-4 col-sm-4 col-xs-12'>
                 <div className='row p-t-60'>
                   <div className='col-md-12'>
-                    <h3>Tin mới nhất</h3>
+                    {isEn ? (
+                      <h3>Newest</h3>
+                      ) : (
+                      <h3>Tin mới nhất</h3>
+                      )}
                     {newestPosts.map((el, index) => {
                       return (
                         <div className='media p-t-20 p-b-20' key={index}>
@@ -76,7 +90,11 @@ class HomePage extends React.Component {
                 </div>
                 <div className='row p-t-60'>
                   <div className='col-md-12'>
-                    <h3>Danh mục</h3>
+                    {isEn ? (
+                      <h3>Categories</h3>
+                      ) : (
+                      <h3>Danh mục</h3>
+                      )}
                   </div>
                   <div className='col-md-12'>
                     <ul className='pro-list p-t-25'>

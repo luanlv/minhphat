@@ -26,13 +26,19 @@ class HomePage extends React.Component {
 
   render () {
     const products = this.props.tree.products.value
-    console.log(products)
+    const isEn = this.props.tree.sourceRequest.host.slice(0, 3) === 'en.'
     return (
       <div >
-        <Helmet >
-          <title>Các sản phẩm</title>
-          <meta name='description' content='MINH PHAT LOGISTICS Logistics and Packing sẽ trở thành công ty hàng đầu trong lĩnh vực Giao nhận, Đóng gói hàng và hàng dự án' />
-        </Helmet>
+        {isEn ? (
+          <Helmet >
+            <title>Products</title>
+          </Helmet>
+          )
+        : (
+          <Helmet >
+            <title>Các sản phẩm</title>
+          </Helmet>
+          )}
 
         <section id='solution' className='p-t-100 p-b-100'>
           <div className='container'>
@@ -40,9 +46,18 @@ class HomePage extends React.Component {
               <div className='col-md-3 col-sm-12 col-xs-12'>
 
                 <div className='solution_tabs'>
-                  <h3>Các sản phẩm của Minh Phát</h3>
+                  {isEn ? (
+                    <h3>Products</h3>
+                    ) : (
+                    <h3>Các sản phẩm</h3>
+                    )}
                   <ul>
-                    <li className='active'><Link to='/products'>Tất cả các sản phẩm</Link></li>
+                    {isEn ? (
+                      <li className='active'><Link to='/products'>All Products</Link></li>
+                      )
+                    : (
+                      <li className='active'><Link to='/products'>Tất cả các sản phẩm</Link></li>
+                      )}
                     {products.map((el, index) => {
                       return (
                         <li key={index}><Link to={'/products/' + el.slug}>{el.title}</Link></li>
@@ -65,7 +80,11 @@ class HomePage extends React.Component {
                           {el.description}
                         </p>
                         <br />
-                        <Link className='btn pull-right' to={'/products/' + el.slug} >Xem thêm</Link>
+                        {isEn ? (
+                          <Link className='btn pull-right' to={'/products/' + el.slug} >View more</Link>
+                          ) : (
+                          <Link className='btn pull-right' to={'/products/' + el.slug} >Xem thêm</Link>
+                          )}
                       </div>
                     </div>
                   )

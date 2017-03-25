@@ -25,12 +25,20 @@ class HomePage extends React.Component {
   }
 
   render () {
+    var isEn = this.props.tree.sourceRequest.host.slice(0, 3) === 'en.'
     return (
       <div >
-        <Helmet >
-          <title>Contact</title>
-          <meta name='description' content='MINH PHAT LOGISTICS LOGISTICS AND PACKING Địa chỉ: Tầng 7 Tòa nhà Sông Đà 9, Đường Phạm Hùng, Phường Mỹ Đình 2 , Quận Nam Từ Liêm, Hà Nội, Việt Nam' />
-        </Helmet>
+        {isEn ? (
+          <Helmet >
+            <title>Contact</title>
+            <meta name='description' content='MINH PHAT LOGISTICS LOGISTICS AND PACKING Address: 7th Floor, Song Da 9 Office Building, Pham Hung Street, My Dinh 2 Ward, Nam Tu Liem District, Hanoi City' />
+          </Helmet>
+          ) : (
+          <Helmet >
+            <title>Contact</title>
+            <meta name='description' content='MINH PHAT LOGISTICS LOGISTICS AND PACKING Địa chỉ: Tầng 7 Tòa nhà Sông Đà 9, Đường Phạm Hùng, Phường Mỹ Đình 2 , Quận Nam Từ Liêm, Hà Nội, Việt Nam' />
+          </Helmet>
+          )}
 
         <section id='contact_form' className='p-t-60 p-b-100'>
           <div className='container'>
@@ -38,7 +46,13 @@ class HomePage extends React.Component {
               <div className='col-md-8 p-b-10'>
                 <div className='heading'>
                   <div className='heading_border bg_red' />
-                  <h2>ĐỂ LẠI TIN NHẮN CHO CHÚNG TÔI</h2>
+                  {isEn ? (
+                    <h2>SEND MESSAGE</h2>
+                    )
+                    : (
+                    <h2>ĐỂ LẠI TIN NHẮN CHO CHÚNG TÔI</h2>
+                    )}
+
                 </div>
                 <div className='row p-t-40'>
                   <form id='contact-form' >
@@ -76,22 +90,39 @@ class HomePage extends React.Component {
               </div>
 
               <div className='col-md-4 col-sm-8 colxs-12'>
-                <div className='form_left'>
-                  <h3>LIÊN HỆ</h3>
-                  <div className='textwidget'>
-                    <p>
-                      <strong>MINH PHAT LOGISTICS LOGISTICS AND PACKING</strong>
-                      <br />
-                      <strong>Địa chỉ:&nbsp;</strong>
-                         Tầng 7 Tòa nhà Sông Đà 9, Đường Phạm Hùng, Phường Mỹ Đình 2 , Quận Nam Từ Liêm, Hà Nội, Việt Nam
-                      <br />
-                      <strong>SDT:</strong> 0432019595<br />
-                      <strong>Fax:</strong> 0432069696<br />
-                      <strong>Email:</strong> hiendv@minhphatlogistics.com.vn
-                    </p>
+                {isEn ? (
+                  <div className='form_left'>
+                    <h3>Contact</h3>
+                    <div className='textwidget'>
+                      <p>
+                        <strong>MINH PHAT LOGISTICS LOGISTICS AND PACKING</strong>
+                        <br />
+                        <strong>Address:&nbsp;</strong>
+                        7th Floor, Song Da 9 Office Building, Pham Hung Street, My Dinh 2 Ward, Nam Tu Liem District, Hanoi City, Vietnam
+                        <br />
+                        <strong>SDT:</strong> 0432019595<br />
+                        <strong>Fax:</strong> 0432069696<br />
+                        <strong>Email:</strong> hiendv@minhphatlogistics.com.vn
+                      </p>
+                    </div>
                   </div>
-                </div>
-
+                  ) : (
+                  <div className='form_left'>
+                    <h3>LIÊN HỆ</h3>
+                    <div className='textwidget'>
+                      <p>
+                        <strong>MINH PHAT LOGISTICS LOGISTICS AND PACKING</strong>
+                        <br />
+                        <strong>Địa chỉ:&nbsp;</strong>
+                        Tầng 7 Tòa nhà Sông Đà 9, Đường Phạm Hùng, Phường Mỹ Đình 2 , Quận Nam Từ Liêm, Hà Nội, Việt Nam
+                        <br />
+                        <strong>Phone:</strong> 84 4 3201 9595<br />
+                        <strong>Fax:</strong> 84 4 3206 9696<br />
+                        <strong>Email:</strong> hiendv@minhphatlogistics.com.vn
+                      </p>
+                    </div>
+                  </div>
+                  )}
               </div>
 
             </div>

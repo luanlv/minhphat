@@ -90,22 +90,10 @@ export const createServer = (config) => {
   app.use('/auth', require('./routes/auth'))
 
   app.get('*', (req, res) => {
-    console.log(req.headers.host)
-    console.log('request header')
-    console.log(req.headers)
-    if (__PROD__) {
-      initialStateApp.sourceRequest = {
-        protocol: req.headers['x-forwarded-proto'] || req.protocol,
-        host: 'minhphatlogistics.com.vn'
-      }
-    } else {
-      initialStateApp.sourceRequest = {
-        protocol: req.headers['x-forwarded-proto'] || req.protocol,
-        host: req.headers.host
-      }
+    initialStateApp.sourceRequest = {
+      protocol: req.headers['x-forwarded-proto'] || req.protocol,
+      host: req.headers.host
     }
-
-
     if(req.user){
       initialStateApp.user = getUserInfo(req.user)
     } else {

@@ -26,19 +26,32 @@ class HomePage extends React.Component {
 
   render () {
     const services = this.props.tree.services.value
-    console.log(services)
+    const isEn = this.props.tree.sourceRequest.host.slice(0, 3) === 'en.'
     return (
       <div >
-        <Helmet title='Các dịch vụ' />
+        {isEn ? (
+          <Helmet title='All Services' />
+          ) : (
+          <Helmet title='Các dịch vụ' />
+          )}
+
         <section id='solution' className='p-t-100 p-b-100'>
           <div className='container'>
             <div className='row'>
               <div className='col-md-3 col-sm-12 col-xs-12'>
 
                 <div className='solution_tabs'>
-                  <h3>Các dịch vụ của Minh Phát</h3>
+                  {isEn ? (
+                    <h3>Services</h3>
+                    ) : (
+                    <h3>Các dịch vụ</h3>
+                    )}
                   <ul>
-                    <li className='active'><Link to='/services'>Tất cả các dịch vụ</Link></li>
+                    {isEn ? (
+                      <li className='active'><Link to='/services'>All Services</Link></li>
+                      ) : (
+                      <li className='active'><Link to='/services'>Tất cả các dịch vụ</Link></li>
+                      )}
                     {services.map((el, index) => {
                       return (
                         <li key={index}><Link to={'/services/' + el.slug}>{el.title}</Link></li>
@@ -61,7 +74,11 @@ class HomePage extends React.Component {
                           {el.description}
                         </p>
                         <br />
-                        <Link className='btn pull-right' to={'/services/' + el.slug} >Xem thêm</Link>
+                        {isEn ? (
+                          <Link className='btn pull-right' to={'/services/' + el.slug} >View more</Link>
+                          ) : (
+                          <Link className='btn pull-right' to={'/services/' + el.slug} >Xem thêm</Link>
+                          )}
                       </div>
                     </div>
                   )

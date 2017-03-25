@@ -20,12 +20,13 @@ class App extends React.Component {
 
   }
   render () {
+    var isEn = this.props.tree.sourceRequest.host.slice(0, 3) === 'en.'
     return (
       <div>
         <Helmet titleTemplate='%s - Minh Phát Logistics' />
-        <Nav props={this.props} />
+        <Nav props={this.props} isEn={isEn} />
         {this.props.children}
-        <Footer />
+        <Footer isEn={isEn} />
       </div>
     )
   }

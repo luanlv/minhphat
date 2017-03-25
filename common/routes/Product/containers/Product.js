@@ -27,6 +27,7 @@ class HomePage extends React.Component {
   render () {
     const products = this.props.tree.products.value
     const product = this.props.tree.product.value
+    const isEn = this.props.tree.sourceRequest.host.slice(0, 3) === 'en.'
     return (
       <div >
         <Helmet >
@@ -38,9 +39,19 @@ class HomePage extends React.Component {
           <div className='container'>
             <div className='col-md-3 col-sm-12 col-xs-12'>
               <div className='solution_tabs'>
-                <h3>Các sản phẩm của Minh Phát</h3>
+                {isEn ? (
+                  <h3>Products</h3>
+                  )
+                : (
+                  <h3>Các sản phẩm </h3>
+                  )}
                 <ul>
-                  <li ><Link to='/products'>Tất cả các sản phẩm</Link></li>
+                  {isEn ? (
+                    <li ><Link to='/products'>All Products</Link></li>
+                    )
+                  : (
+                    <li ><Link to='/products'>Tất cả các sản phẩm</Link></li>
+                    )}
                   {products.map((el, index) => {
                     return (
                       <li key={index} className={this.props.params.slug === el.slug ? 'active' : ''}><Link to={'/products/' + el.slug}>{el.title}</Link></li>

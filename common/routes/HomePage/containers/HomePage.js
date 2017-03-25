@@ -27,22 +27,35 @@ class HomePage extends React.Component {
   }
 
   render () {
+    var isEn = this.props.tree.sourceRequest.host.slice(0, 3) === 'en.'
     return (
       <div >
-        <Helmet >
-          <title>Trang chủ</title>
-          <meta name='description' content='MINH PHAT LOGISTICS là một công ty cổ phần, 100% vốn đầu tư tư nhân được thành lập vào tháng 11 năm 2015 với số vốn điều lệ khoảng 5 tỷ đồng.' />
-        </Helmet>
-        <Slider />
+        {isEn ? (
+          <Helmet >
+            <title>Home Page</title>
+            <meta name='description' content='MINH PHAT Logistics and Packing is a Joint Stock Company, 100% private owned, incorporated in November 2015 with a legal working capital of VND 5,000,000,000..' />
+          </Helmet>
+          ) : (
+          <Helmet >
+            <title>Trang chủ</title>
+            <meta name='description' content='MINH PHAT LOGISTICS là một công ty cổ phần, 100% vốn đầu tư tư nhân được thành lập vào tháng 11 năm 2015 với số vốn điều lệ khoảng 5 tỷ đồng.' />
+          </Helmet>
+          )}
+        <Slider isEn={isEn} />
         <Service
           services={this.props.tree.services.value}
+          isEn={isEn}
         />
 
         <section id='bg_text' className='bg_3' style={{background: 'url(/assets/images/finance/bg.jpg) no-repeat', backgroundPosition: '50% -224px', backgroundAttachment: 'fixed'}}>
           <div className='container'>
             <div className='row'>
               <div className='col-md-12 text-center'>
-                <h2>CÁC SẢN PHẨM CỦA MINH PHÁT</h2>
+                {isEn ? (
+                  <h2>PRODUCTS</h2>
+                  ) : (
+                  <h2>CÁC SẢN PHẨM CỦA MINH PHÁT</h2>
+                  )}
               </div>
             </div>
           </div>
@@ -76,7 +89,7 @@ class HomePage extends React.Component {
               <div className='col-md-12 text-center'>
                 <div className='heading'>
                   <div className='heading_border bg_red' />
-                  <h2>GIÁ TRỊ <span className='color_red'>CỐT LÕI</span></h2>
+                  {isEn ? (<h2>CORE <span className='color_red'>VALUES</span></h2>) : (<h2>GIÁ TRỊ <span className='color_red'>CỐT LÕI</span></h2>)}
                 </div>
               </div>
             </div>
@@ -86,12 +99,21 @@ class HomePage extends React.Component {
                   <img src='/assets/images/testinomial.png' alt='partner1' />
                   <h3 className='p-t-15'>hiendv</h3>
                   <p>CEO MINH PHAT LOGISTICS</p>
-                  <div className=' text-center p-t-30'>
-                    <p style={{textAlign: 'center'}}>MINH PHAT LOGISTICS Logistics and Packing sẽ trở thành công ty hàng đầu trong lĩnh vực Giao nhận, Đóng gói hàng hóa và hàng dự án.</p>
-                    <p style={{textAlign: 'center'}}><strong>Khách hàng là trên hết</strong>: Những gì chúng tôi làm chỉ có giá trị khi chúng thật sự có lợi cho khách hàng và đồng nghiệp của chúng tôi</p>
-                    <p style={{textAlign: 'center'}}><strong>Làm việc tập thể</strong>: Tại MINH PHAT LOGISTICS, bạn sẽ không có hiệu suất làm việc tốt mà không hợp tác.</p>
-                    <p style={{textAlign: 'center'}}>&nbsp;</p>
-                  </div>
+                  {isEn ? (
+                    <div className=' text-center p-t-30'>
+                      <p style={{textAlign: 'center'}}>MINH PHAT Logistics and Packing will become the leading company in Logistics, Packaging of goods and project cargo.</p>
+                      <p style={{textAlign: 'center'}}><strong>Customer first</strong>: Which is truly beneficial to our customers and partners.</p>
+                      <p style={{textAlign: 'center'}}><strong>Team work</strong>: At DDV Logistics, good performance comes only from team work spirit.</p>
+                      <p style={{textAlign: 'center'}}>&nbsp;</p>
+                    </div>
+                    ) : (
+                    <div className=' text-center p-t-30'>
+                      <p style={{textAlign: 'center'}}>MINH PHAT Logistics and Packing sẽ trở thành công ty hàng đầu trong lĩnh vực Giao nhận, Đóng gói hàng hóa và hàng dự án.</p>
+                      <p style={{textAlign: 'center'}}><strong>Khách hàng là trên hết</strong>: Những gì chúng tôi làm chỉ có giá trị khi chúng thật sự có lợi cho khách hàng và đồng nghiệp của chúng tôi</p>
+                      <p style={{textAlign: 'center'}}><strong>Làm việc tập thể</strong>: Tại MINH PHAT LOGISTICS, bạn sẽ không có hiệu suất làm việc tốt mà không hợp tác.</p>
+                      <p style={{textAlign: 'center'}}>&nbsp;</p>
+                    </div>
+                    )}
                 </div>
               </div>
             </div>
@@ -103,7 +125,7 @@ class HomePage extends React.Component {
               <div className='col-md-8 col-sm-8 col-xs-12'>
                 <div className='heading'>
                   <div className='heading_border bg_red' />
-                  <h2>Tin tức <span className='color_red'>Logistics</span></h2>
+                  {isEn ? (<h2><span className='color_red'>Logistics</span> news</h2>) : (<h2>Tin tức <span className='color_red'>Logistics</span></h2>)}
                 </div>
 
                 <div id='latest_news-slider' className='owl-carousel p-t-40'>
@@ -122,12 +144,16 @@ class HomePage extends React.Component {
               <div className='col-md-4 col-sm-4 col-xs-12'>
                 <div className='heading'>
                   <div className='heading_border bg_red' />
-                  <p>GỬI YÊU CẦU</p>
+                  {isEn ? (<p>SEND MESSAGE</p>) : (<p>GỬI YÊU CẦU</p>)}
                 </div>
                 <div className='p-t-40'>
                   <div className='over_image'><img src='/assets/images/update_bg.png' alt='image' /></div>
                   <div className='updates'>
-                    <p className='color_white'>Nếu như bạn có yêu cầu gửi đến chúng tôi, xin vui lòng đền vào ô bên dưới. </p>
+                    {isEn ? (
+                      <p className='color_white'>Form:</p>
+                      ) : (
+                      <p className='color_white'>Nếu như bạn có yêu cầu gửi đến chúng tôi, xin vui lòng đền vào ô bên dưới.</p>
+                      )}
                     <form className='p-t-25'>
                       <div className='col-md-12'>
                         <input type='text' placeholder='Name' />

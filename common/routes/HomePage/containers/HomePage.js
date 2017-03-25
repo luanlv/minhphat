@@ -103,7 +103,7 @@ class HomePage extends React.Component {
                     <div className=' text-center p-t-30'>
                       <p style={{textAlign: 'center'}}>MINH PHAT Logistics and Packing will become the leading company in Logistics, Packaging of goods and project cargo.</p>
                       <p style={{textAlign: 'center'}}><strong>Customer first</strong>: Which is truly beneficial to our customers and partners.</p>
-                      <p style={{textAlign: 'center'}}><strong>Team work</strong>: At DDV Logistics, good performance comes only from team work spirit.</p>
+                      <p style={{textAlign: 'center'}}><strong>Team work</strong>: At Minh Phat Logistics, good performance comes only from team work spirit.</p>
                       <p style={{textAlign: 'center'}}>&nbsp;</p>
                     </div>
                     ) : (

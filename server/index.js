@@ -68,7 +68,7 @@ export const createServer = (config) => {
   app.use(passport.initialize())
   app.use(passport.session())
 
-  iconsole.log(f (__PROD__ || __TEST__) {
+  if (__PROD__ || __TEST__) {
     app.use(morgan('combined'))
     app.use(helmet())
     app.use(hpp())

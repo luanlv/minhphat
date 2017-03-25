@@ -91,6 +91,8 @@ export const createServer = (config) => {
 
   app.get('*', (req, res) => {
     console.log(req.headers.host)
+    console.log('request header')
+    console.log(req.headers)
     if (__PROD__) {
       initialStateApp.sourceRequest = {
         protocol: req.headers['x-forwarded-proto'] || req.protocol,

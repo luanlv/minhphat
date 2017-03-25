@@ -1,8 +1,8 @@
 import * as getData from '../../dataRequire'
 import request from '../../request'
 
-export function loadData () {
-  return (dispatch, getState) => request(dispatch, getState, requireData(getState()))
+export function loadData (slug) {
+  return (dispatch, getState) => request(dispatch, getState, requireData(getState(), slug))
 }
 
 function requireData (state, slug) {

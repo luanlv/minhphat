@@ -16,15 +16,15 @@ const mapStateToProps = state => ({
 
 class HomePage extends React.Component {
   // eslint-disable-next-line
-  constructor (props) {
+  constructor(props) {
     super(props)
   }
 
-  componentDidMount () {
+  componentDidMount() {
 
   }
 
-  render () {
+  render() {
     var isEn = this.props.tree.sourceRequest.host.slice(0, 3) === 'en.'
     return (
       <div >
@@ -96,7 +96,7 @@ class HomePage extends React.Component {
                       <p>Điện thoại: 0432019595</p>
                       <p>Fax: 0432069696</p>
                       <p>Email: hiendv@minhphatlogistics.com.vn</p>
-                      <p>MINH PHAT LOGISTICS là một công ty cổ phần, 100% vốn đầu tư tư nhân được thành lập vào tháng 11 năm 2015 với số vốn điều lệ khoảng 5 tỷ đồng.</p>
+                      <p>MINH PHAT LOGISTICS là một công ty cổ phần, 100% vốn đầu tư tư nhân được thành lập vào tháng 11 năm 2015 với số vốn điều lệ 5 tỷ đồng.</p>
                       <br />
                       <p><strong>Lĩnh vực hoạt động:</strong></p>
                       <ul style={{listStyle: 'circle', paddingLeft: 20, marginTop: 5}}>
@@ -179,4 +179,3 @@ class HomePage extends React.Component {
 }
 
 export default provideHooks(redial)(connect(mapStateToProps)(HomePage))
-

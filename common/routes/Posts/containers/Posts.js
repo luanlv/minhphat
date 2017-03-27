@@ -4,7 +4,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { loadData } from '../actions'
 import Helmet from 'react-helmet'
-import {Link} from 'react-router'
+import { Link } from 'react-router'
 
 const redial = {
   fetch: ({ dispatch }) => dispatch(loadData())
@@ -16,15 +16,15 @@ const mapStateToProps = state => ({
 
 class HomePage extends React.Component {
   // eslint-disable-next-line
-  constructor (props) {
+  constructor(props) {
     super(props)
   }
 
-  componentDidMount () {
+  componentDidMount() {
 
   }
 
-  render () {
+  render() {
     const posts = this.props.tree.posts.value
     const newestPosts = this.props.tree.newestPosts.value
     const categories = this.props.tree.categories.value
@@ -116,4 +116,3 @@ class HomePage extends React.Component {
 }
 
 export default provideHooks(redial)(connect(mapStateToProps)(HomePage))
-

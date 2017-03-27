@@ -28,32 +28,21 @@ module.exports = {
     path: CLIENT_OUTPUT
   },
   module: {
-    preLoaders: [
-      {
-        // set up standard-loader as a preloader
-        test: /\.jsx?$/,
-        loader: 'standard',
-        exclude: /(node_modules)/
+    preLoaders: [{
+      // set up standard-loader as a preloader
+      test: /\.jsx?$/,
+      loader: 'standard',
+      exclude: /(node_modules)/
+    }],
+    loaders: [{
+      test: /\.js$/,
+      loader: 'babel',
+      exclude: /(node_modules|server)/,
+      query: {
+        cacheDirectory: true,
+        presets: ["es2015", "react", "stage-0"]
       }
-    ],
-    loaders: [
-      {
-        test: /\.js$/,
-        loader: 'babel',
-        exclude: /(node_modules|server)/,
-        query: {
-          cacheDirectory: true,
-          presets: ["es2015", "react", "stage-0"]
-        }
-      },
-    ]
-  },
-  standard: {
-    // config options to be passed through to standard e.g.
-    parser: 'babel-eslint',
-    rules: {
-      "no-useless-constructor": 0
-    }
+    }, ]
   },
   plugins: [
     new webpack.DefinePlugin({

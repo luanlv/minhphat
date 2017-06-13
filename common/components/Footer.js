@@ -39,7 +39,7 @@ const Footer = ({isEn}) => {
               Address: 7th Floor, Song Da 9 Office Building, Pham Hung Street, My Dinh 2 Ward, Nam Tu Liem District, Hanoi City, Vietnam
             </p>)
             : (<p className='footer_p color_white'>
-              Địa chỉ: Tầng 7 Tòa nhà Sông Đà 9, Đường Phạm Hùng, Phường Mỹ Đình 2 , Quận Nam Từ Liêm, Hà Nội, Việt Nam
+              Địa chỉ: Tầng 7, tòa nhà Sông Đà 9, đường Phậm Hùng, Phường Mỹ Đình 2, Quận Nam Từ Liêm , Thành Phố Hà Nội, Việt Nam
             </p>)}
           </div>
 

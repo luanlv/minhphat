@@ -67,8 +67,8 @@ class HomePage extends React.Component {
                 <div className='col-md-7 col-sm-7 col-xs-12'>
                   <div className='row'>
                     <div className='textwidget' style={{padding: 10, fontSize: 16}}>
-                      <p>Company Name:<strong>MINH PHAT LOGISTICS VIETNAM JOINT STOCK COMPANY</strong></p>
-                      <p>Trading Name : <strong>MINH PHAT LOGISTICS AND PACKING</strong></p>
+                      <p>Company Name:<strong>MINH PHAT TRADING AND INTERNATIONAL TRANSPORT SERVICES JOINT STOCK COMPANY</strong></p>
+                      <p>Trading Name : <strong>MINH PHAT TITS.,JSC</strong></p>
                       <p>Address: 7th Floor, Song Da 9 Office Building, Pham Hung Street, My Dinh 2 Ward, Nam Tu Liem District, Hanoi City, Vietnam</p>
                       <p>Tel: 84 4 3201 9595</p>
                       <p>Fax: 84 4 3206 9696</p>
@@ -90,11 +90,11 @@ class HomePage extends React.Component {
                 <div className='col-md-7 col-sm-7 col-xs-12'>
                   <div className='row'>
                     <div className='textwidget' style={{padding: 10, fontSize: 16}}>
-                      <p>Tên công ty : <strong>CÔNG TY CỔ PHẦN MINH PHAT  LOGISTICS</strong></p>
-                      <p>Tên giao dịch : <strong>MINH PHAT LOGISTICS</strong></p>
-                      <p>Địa chỉ: Tầng 7 Tòa nhà Sông Đà 9, Đường Phạm Hùng, Phường Mỹ Đình 2 , Quận Nam Từ Liêm, Hà Nội, Việt Nam</p>
-                      <p>Điện thoại: 0432019595</p>
-                      <p>Fax: 0432069696</p>
+                      <p>Tên công ty : <strong>CÔNG TY CỔ PHẦN DỊCH VỤ VẬN CHUYỂN QUỐC TẾ VÀ THƯƠNG MẠI MINH PHÁT</strong></p>
+                      <p>Tên giao dịch : <strong>MINH PHAT TITS.,JSC</strong></p>
+                      <p>Địa chỉ: Tầng 7, tòa nhà Sông Đà 9, đường Phậm Hùng, Phường Mỹ Đình 2, Quận Nam Từ Liêm , Thành Phố Hà Nội, Việt Nam</p>
+                      <p>Điện thoại: 0432.019.595</p>
+                      <p>Fax: 0432.069.696</p>
                       <p>Email: hiendv@minhphatlogistics.com.vn</p>
                       <p>MINH PHAT LOGISTICS là một công ty cổ phần, 100% vốn đầu tư tư nhân được thành lập vào tháng 11 năm 2015 với số vốn điều lệ 5 tỷ đồng.</p>
                       <br />

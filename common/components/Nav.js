@@ -20,8 +20,8 @@ class Nav extends React.Component {
           <div className='container'>
             <div className='row'>
               <div className='col-md-4 col-sm-4 col-xs-12 p-0' >
-                {isEn ? (<p className='p_15 p-white p-t-10' style={{fontSize: '12px !important'}}>MINH PHAT LOGISTICS VIETNAM JOINT STOCK COMPANY</p>)
-                  : (<p className='p_15 p-white p-t-10' style={{fontSize: '12px !important'}}>CÔNG TY CỔ PHẦN MINH PHAT LOGISTICS VIỆT NAM</p>)
+                {isEn ? (<p className='p_15 p-white p-t-10' style={{fontSize: '12px !important'}}>MINH PHAT TITS., JSC</p>)
+                  : (<p className='p_15 p-white p-t-10' style={{fontSize: '12px !important'}}>MINH PHAT TITS., JSC</p>)
                 }
               </div>
               <div className='col-md-8 col-sm-8 col-xs-12 text-right p-0'>

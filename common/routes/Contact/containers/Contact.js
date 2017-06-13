@@ -95,13 +95,13 @@ class HomePage extends React.Component {
                     <h3>Contact</h3>
                     <div className='textwidget'>
                       <p>
-                        <strong>MINH PHAT LOGISTICS LOGISTICS AND PACKING</strong>
+                        <strong>MINH PHAT TRADING AND INTERNATIONAL TRANSPORT SERVICES JOINT STOCK COMPANY</strong>
                         <br />
                         <strong>Address:&nbsp;</strong>
                         7th Floor, Song Da 9 Office Building, Pham Hung Street, My Dinh 2 Ward, Nam Tu Liem District, Hanoi City, Vietnam
                         <br />
-                        <strong>SDT:</strong> 0432019595<br />
-                        <strong>Fax:</strong> 0432069696<br />
+                        <strong>SDT:</strong> 0432.019.595<br />
+                        <strong>Fax:</strong> 0432.069.696<br />
                         <strong>Email:</strong> hiendv@minhphatlogistics.com.vn
                       </p>
                     </div>
@@ -114,7 +114,7 @@ class HomePage extends React.Component {
                         <strong>MINH PHAT LOGISTICS LOGISTICS AND PACKING</strong>
                         <br />
                         <strong>Địa chỉ:&nbsp;</strong>
-                        Tầng 7 Tòa nhà Sông Đà 9, Đường Phạm Hùng, Phường Mỹ Đình 2 , Quận Nam Từ Liêm, Hà Nội, Việt Nam
+                        Địa chỉ: Tầng 7, tòa nhà Sông Đà 9, đường Phậm Hùng, Phường Mỹ Đình 2, Quận Nam Từ Liêm , Thành Phố Hà Nội, Việt Nam
                         <br />
                         <strong>Phone:</strong> 84 4 3201 9595<br />
                         <strong>Fax:</strong> 84 4 3206 9696<br />
